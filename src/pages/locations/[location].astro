@@ -1,0 +1,105 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+
+export function getStaticPaths() {
+  const locations = [
+    { name: 'London', slug: 'london' },
+    { name: 'Manchester', slug: 'manchester' },
+    { name: 'Birmingham', slug: 'birmingham' },
+    { name: 'Leeds', slug: 'leeds' },
+    { name: 'Glasgow', slug: 'glasgow' },
+  ];
+  return locations.map((loc) => ({
+    params: { location: loc.slug },
+    props: { locationName: loc.name },
+  }));
+}
+
+const { locationName } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead 
+			title={`Web Design for Trades in ${locationName} | ${SITE_TITLE}`} 
+			description={`Professional website design for plumbers, electricians, and builders in ${locationName}. Get more local leads today.`} 
+		/>
+	</head>
+	<body>
+		<Header />
+		<main class="container page-content">
+			<section class="section text-center">
+				<h1>Trade Website Design in <span class="highlight">{locationName}</span></h1>
+				<p class="lead">Helping {locationName}'s tradespeople build their digital reputation.</p>
+				<a href="/contact" class="btn btn-primary">Get a Quote in {locationName}</a>
+			</section>
+
+			<section class="section">
+				<div class="content text-center max-w-readable">
+					<h2>Why trades in {locationName} choose us</h2>
+					<p>
+						We understand the local market in {locationName}. Whether you are based in the city centre or the surrounding suburbs,
+						we build websites that target your local customers specifically.
+					</p>
+					<p>
+						Don't let your competitors in {locationName} take all the work. Get a site that ranks on Google Maps and organic search.
+					</p>
+				</div>
+			</section>
+
+			<!-- SEO Content Block (Simulated) -->
+			<section class="section seo-block">
+				<h3>Looking for a Web Designer in {locationName}?</h3>
+				<p>
+					If you are looking for <strong>web design for trades in {locationName}</strong>, look no further. 
+					We specialize in creating high-converting websites for:
+				</p>
+				<ul class="seo-list">
+					<li>Plumbers in {locationName}</li>
+					<li>Electricians in {locationName}</li>
+					<li>Builders & Joiners in {locationName}</li>
+					<li>Landscapers in {locationName}</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.page-content { padding-top: 100px; }
+	.highlight { color: var(--color-primary); }
+	.lead { font-size: 1.5rem; color: var(--color-text-muted); margin-bottom: 2rem; }
+	
+	.max-w-readable {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.seo-block {
+		background: var(--color-bg-offset);
+		padding: 3rem;
+		border-radius: 1rem;
+		border: 1px solid var(--color-border);
+		margin-top: 3rem;
+	}
+
+	.seo-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.seo-list li {
+		background: rgba(255, 255, 255, 0.05);
+		padding: 1rem;
+		border-radius: 0.5rem;
+		list-style: none;
+		text-align: center;
+	}
+</style>

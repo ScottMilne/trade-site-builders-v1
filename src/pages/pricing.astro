@@ -1,0 +1,151 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Pricing | ${SITE_TITLE}`} description="Simple, transparent pricing for trade websites." />
+	</head>
+	<body>
+		<Header />
+		<main class="container page-content">
+			<section class="section text-center">
+				<h1>Simple Pricing</h1>
+				<p class="lead">No hidden fees. Choose the package that fits your business.</p>
+			</section>
+
+			<div class="pricing-grid">
+				<!-- Starter -->
+				<div class="pricing-card">
+					<div class="header">
+						<h3>Starter</h3>
+						<div class="price">£499</div>
+						<p>Perfect for sole traders just starting out.</p>
+					</div>
+					<ul class="features-list">
+						<li>5 Page Website</li>
+						<li>Mobile Friendly Design</li>
+						<li>Contact Form</li>
+						<li>Google Maps Integration</li>
+						<li>Basic SEO Setup</li>
+					</ul>
+					<a href="/contact?plan=starter" class="btn btn-outline full-width">Get Started</a>
+				</div>
+
+				<!-- Pro -->
+				<div class="pricing-card popular">
+					<div class="badge">Most Popular</div>
+					<div class="header">
+						<h3>Professional</h3>
+						<div class="price">£999</div>
+						<p>For established businesses wanting to grow.</p>
+					</div>
+					<ul class="features-list">
+						<li>10 Page Website</li>
+						<li>Custom Design</li>
+						<li>Service Area SEO Pages</li>
+						<li>Gallery & Testimonials</li>
+						<li>Google Business Profile Setup</li>
+						<li>1 Month Free Support</li>
+					</ul>
+					<a href="/contact?plan=pro" class="btn btn-primary full-width">Get Started</a>
+				</div>
+
+				<!-- Enterprise -->
+				<div class="pricing-card">
+					<div class="header">
+						<h3>Empire</h3>
+						<div class="price">£1999+</div>
+						<p>Dominate your region with a massive digital presence.</p>
+					</div>
+					<ul class="features-list">
+						<li>Unlimited Pages</li>
+						<li>Advanced SEO Campaign</li>
+						<li>Booking System Integration</li>
+						<li>Logo & Brand Design</li>
+						<li>Priority Support</li>
+						<li>3 Months Free Support</li>
+					</ul>
+					<a href="/contact?plan=empire" class="btn btn-outline full-width">Contact Us</a>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.page-content { padding-top: 100px; }
+	.lead { font-size: 1.5rem; color: var(--color-text-muted); margin-bottom: 3rem; }
+
+	.pricing-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.pricing-card {
+		background: var(--color-bg-offset);
+		border-radius: 1rem;
+		padding: 2.5rem;
+		border: 1px solid var(--color-border);
+		position: relative;
+		transition: transform 0.3s;
+	}
+	
+	.pricing-card:hover {
+		transform: translateY(-5px);
+		border-color: var(--color-primary);
+	}
+
+	.pricing-card.popular {
+		border: 2px solid var(--color-primary);
+		transform: scale(1.05);
+		box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+		z-index: 10;
+	}
+
+	.badge {
+		position: absolute;
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--color-primary);
+		color: white;
+		padding: 0.25rem 1rem;
+		border-radius: 20px;
+		font-size: 0.8rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.header { text-align: center; border-bottom: 1px solid var(--color-border); padding-bottom: 2rem; margin-bottom: 2rem; }
+	.price { font-size: 3rem; font-weight: 800; color: white; margin: 0.5rem 0; }
+	.header p { color: var(--color-text-muted); }
+
+	.features-list {
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+	}
+
+	.features-list li {
+		padding: 0.8rem 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		text-align: center;
+		color: var(--color-text);
+	}
+
+	.features-list li:last-child { border-bottom: none; }
+
+	.full-width {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+</style>

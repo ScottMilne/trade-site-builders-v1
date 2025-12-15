@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -13,38 +14,164 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<Hero />
+
+			<!-- Features Section -->
+			<section class="section features">
+				<div class="container">
+					<div class="section-header">
+						<h2>Why Choose Us?</h2>
+						<p>We build websites that work as hard as you do.</p>
+					</div>
+					<div class="grid-3">
+						<div class="card">
+							<div class="icon">🚀</div>
+							<h3>Fast & Mobile First</h3>
+							<p>Your site will load instantly and look perfect on every phone, tablet, and computer.</p>
+						</div>
+						<div class="card">
+							<div class="icon">🔍</div>
+							<h3>Local SEO Built-in</h3>
+							<p>We optimize your site to rank for local searches like "Plumber in [Your City]".</p>
+						</div>
+						<div class="card">
+							<div class="icon">👷</div>
+							<h3>Trade Specialized</h3>
+							<p>We understand your business. We write the copy, source the images, and build the trust.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Services Preview -->
+			<section class="section services-preview">
+				<div class="container">
+					<div class="split-layout">
+						<div class="content">
+							<h2>Everything You Need to Grow</h2>
+							<p>Stop relying on word of mouth alone. Get a professional digital presence that generates leads while you sleep.</p>
+							<ul class="check-list">
+								<li>Custom Website Design</li>
+								<li>Google Business Profile Setup</li>
+								<li>Review Management Integration</li>
+								<li>Monthly Maintenance & Updates</li>
+							</ul>
+							<a href="/services" class="btn btn-primary">Explore Services</a>
+						</div>
+						<div class="image-wrapper">
+							<!-- Placeholder for a trade-related image -->
+							<div class="placeholder-image">
+								<span>Modern Trade Website Example</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="section cta-section">
+				<div class="container text-center">
+					<h2>Ready to Get More Work?</h2>
+					<p>Packages start from just £499. No hidden fees.</p>
+					<a href="/contact" class="btn btn-primary btn-lg">Get Your Free Quote</a>
+				</div>
+			</section>
+
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	/* Local page styles */
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+	
+	.section-header p {
+		color: var(--color-text-muted);
+		font-size: 1.2rem;
+	}
+
+	.grid-3 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.card {
+		background: var(--color-bg-offset);
+		padding: 2rem;
+		border-radius: 1rem;
+		border: 1px solid var(--color-border);
+		transition: transform 0.2s;
+	}
+
+	.card:hover {
+		transform: translateY(-5px);
+		border-color: var(--color-primary);
+	}
+
+	.icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.split-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.check-list {
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+	}
+
+	.check-list li {
+		margin-bottom: 0.8rem;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+	.check-list li::before {
+		content: "✓";
+		color: var(--color-accent);
+		position: absolute;
+		left: 0;
+		font-weight: bold;
+	}
+
+	.placeholder-image {
+		width: 100%;
+		height: 400px;
+		background: linear-gradient(45deg, #1e293b, #0f172a);
+		border-radius: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-text-muted);
+		border: 1px solid var(--color-border);
+	}
+
+	.cta-section {
+		background: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(11, 14, 20, 0));
+		border-top: 1px solid var(--color-border);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.btn-lg {
+		padding: 1rem 2.5rem;
+		font-size: 1.1rem;
+		margin-top: 1.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.split-layout {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

@@ -1,0 +1,94 @@
+---
+---
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <h1 class="animate-fade-in">
+      Build a <span class="highlight">Trade Website</span><br>
+      That Gets You <span class="highlight-alt">Jobs</span>
+    </h1>
+    <p class="animate-fade-in delay-1">
+      Specialized web design for Plumbers, Electricians, Builders, and Tradespeople. 
+      Professional, mobile-friendly, and SEO-optimized to rank locally.
+    </p>
+    <div class="cta-group animate-fade-in delay-2">
+      <a href="/pricing" class="btn btn-primary">View Packages</a>
+      <a href="/services" class="btn btn-outline">Our Process</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding: 180px 0 120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(249, 115, 22, 0.1), transparent 40%);
+    z-index: -1;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    background: linear-gradient(120deg, var(--color-primary), #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .highlight-alt {
+    color: var(--color-accent);
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  /* Delay utilities for staggered animations */
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.4s; }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 140px;
+      min-height: auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    .cta-group {
+      flex-direction: column;
+    }
+  }
+</style>
