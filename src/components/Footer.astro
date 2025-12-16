@@ -3,105 +3,214 @@ const today = new Date();
 ---
 
 <footer class="site-footer">
-	<div class="container footer-grid">
-		<div class="footer-brand">
-			<a href="/" class="logo">TradeSite<span>Builders</span></a>
-			<p>Premium websites for tradespeople. high-converting, SEO-optimized, and built to last.</p>
-		</div>
-		
-		<div class="footer-links">
-			<h3>Company</h3>
-			<a href="/about">About Us</a>
-			<a href="/services">Services</a>
-			<a href="/pricing">Pricing</a>
-			<a href="/contact">Contact</a>
-		</div>
+	<div class="footer-container">
+		<div class="footer-grid">
+			<div class="footer-brand">
+				<div class="footer-logo">
+					<div class="footer-logo-box">
+						<span class="footer-logo-letter">T</span>
+					</div>
+					<span class="footer-brand-text">Trade Site <span class="footer-brand-accent">Builders</span></span>
+				</div>
+				<p class="footer-description">Specialized web design and digital marketing agency helping tradespeople grow their business and get more calls.</p>
+			</div>
+			
+			<div class="footer-links">
+				<h4 class="footer-heading">Services</h4>
+				<ul class="footer-list">
+					<li><a href="#">Web Design</a></li>
+					<li><a href="#">SEO for Trades</a></li>
+					<li><a href="#">PPC Management</a></li>
+					<li><a href="#">Lead Generation</a></li>
+				</ul>
+			</div>
 
-		<div class="footer-links">
-			<h3>Services</h3>
-			<a href="/services#web-design">Web Design</a>
-			<a href="/services#seo">SEO for Trades</a>
-			<a href="/services#hosting">Hosting & Support</a>
-		</div>
+			<div class="footer-links">
+				<h4 class="footer-heading">Company</h4>
+				<ul class="footer-list">
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Our Work</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+			</div>
 
-		<div class="footer-social">
-			<h3>Connect</h3>
-			<div class="social-icons">
-				<a href="#" aria-label="Facebook">FB</a>
-				<a href="#" aria-label="Twitter">TW</a>
-				<a href="#" aria-label="Instagram">IG</a>
+			<div class="footer-contact">
+				<h4 class="footer-heading">Contact Us</h4>
+				<div class="footer-phone">0800 123 4567</div>
+				<p class="footer-email">hello@tradesitebuilders.com</p>
+				<p class="footer-address">123 Builder Street,<br />Trade City, TC 12345</p>
 			</div>
 		</div>
-	</div>
-	<div class="container copyright">
-		&copy; {today.getFullYear()} Trade Site Builders. All rights reserved.
+		<div class="footer-copyright">
+			&copy; {today.getFullYear()} The Trade Site Builders. All rights reserved.
+		</div>
 	</div>
 </footer>
 
 <style>
 	.site-footer {
-		background-color: var(--color-bg-offset);
-		border-top: 1px solid var(--color-border);
-		padding: 4rem 0 2rem;
-		margin-top: 4rem;
+		background: var(--color-navy-900);
+		padding-top: 4rem;
+		padding-bottom: 2rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.footer-container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 1rem;
 	}
 
 	.footer-grid {
 		display: grid;
-		grid-template-columns: 2fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
 		gap: 3rem;
 		margin-bottom: 3rem;
 	}
 
-	.logo {
-		font-family: var(--font-heading);
-		font-weight: 800;
-		font-size: 1.5rem;
-		color: white;
-		margin-bottom: 1rem;
-		display: block;
-	}
-	.logo span { color: var(--color-primary); }
-
-	.footer-brand p {
-		color: var(--color-text-muted);
-		max-width: 300px;
-	}
-
-	.footer-links h3, .footer-social h3 {
-		font-size: 1.1rem;
-		margin-bottom: 1.5rem;
-		color: white;
-	}
-
-	.footer-links a {
-		display: block;
-		margin-bottom: 0.8rem;
-		color: var(--color-text-muted);
-		font-size: 0.95rem;
-	}
-
-	.footer-links a:hover {
-		color: var(--color-primary);
-	}
-
-	.social-icons {
+	.footer-logo {
 		display: flex;
-		gap: 1rem;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
 	}
 
-	.copyright {
-		text-align: center;
+	.footer-logo-box {
+		width: 2rem;
+		height: 2rem;
+		background: var(--color-gold-500);
+		border-radius: 0.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer-logo-letter {
+		color: var(--color-navy-900);
+		font-weight: bold;
+	}
+
+	.footer-brand-text {
+		font-weight: bold;
+		color: white;
+		font-size: 1.125rem;
+	}
+
+	.footer-brand-accent {
+		color: var(--color-gold-500);
+	}
+
+	.footer-description {
+		color: #9ca3af;
+		font-size: 0.875rem;
+		line-height: 1.75;
+	}
+
+	.footer-heading {
+		color: white;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+
+	.footer-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.footer-list a {
+		color: #9ca3af;
+		font-size: 0.875rem;
+		transition: color 0.2s;
+	}
+
+	.footer-list a:hover {
+		color: var(--color-gold-500);
+	}
+
+	.footer-phone {
+		color: var(--color-gold-500);
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-email {
+		color: #9ca3af;
+		font-size: 0.875rem;
+		margin-bottom: 1rem;
+	}
+
+	.footer-address {
+		color: #9ca3af;
+		font-size: 0.875rem;
+	}
+
+	.footer-copyright {
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
 		padding-top: 2rem;
-		border-top: 1px solid var(--color-border);
-		color: var(--color-text-muted);
-		font-size: 0.9rem;
+		text-align: center;
+		color: #4b5563;
+		font-size: 0.875rem;
 	}
 
-	@media (max-width: 768px) {
+	@media (min-width: 768px) {
 		.footer-grid {
-			grid-template-columns: 1fr;
-			gap: 2rem;
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 </style>
+
+<script>
+	function waitForGSAP(callback) {
+		if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
+			callback();
+		} else {
+			setTimeout(() => waitForGSAP(callback), 50);
+		}
+	}
+
+	function initAnimations() {
+		gsap.registerPlugin(ScrollTrigger);
+		
+		// Footer animation
+		gsap.from('.footer-grid > *', {
+			scrollTrigger: {
+				trigger: '.site-footer',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			},
+			opacity: 0,
+			y: 50,
+			duration: 0.8,
+			stagger: 0.1,
+			ease: 'power3.out'
+		});
+		
+		// Footer copyright animation
+		gsap.from('.footer-copyright', {
+			scrollTrigger: {
+				trigger: '.site-footer',
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			},
+			opacity: 0,
+			y: 20,
+			duration: 0.6,
+			delay: 0.4,
+			ease: 'power3.out'
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', () => {
+			waitForGSAP(initAnimations);
+		});
+	} else {
+		waitForGSAP(initAnimations);
+	}
+</script>

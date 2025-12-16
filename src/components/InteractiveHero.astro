@@ -1,0 +1,328 @@
+---
+---
+<section class="hero-split">
+  <div class="hero-bg"></div>
+  <div class="container split-layout">
+    <div class="hero-text animate-fade-in-left">
+      <div class="badge">
+        <span class="pulse-dot"></span>
+        Available for new projects
+      </div>
+      <h1>
+        Web Design That <br />
+        <span class="highlight">Gets You Hired.</span>
+      </h1>
+      <p>
+        Stop losing jobs to competitors with better websites. 
+        We build professional, high-ranking sites specifically for 
+        <strong>plumbers, electricians, and builders</strong>.
+      </p>
+      <div class="features-mini">
+        <span>✓ No Monthly Contracts</span>
+        <span>✓ 2 Week Turnaround</span>
+      </div>
+    </div>
+
+    <div class="hero-cta animate-fade-in-right">
+      <div class="cta-card glass-panel">
+        <div class="cta-header">
+          <h3>Ready to grow?</h3>
+          <p>Speak directly to a developer.</p>
+        </div>
+        <div class="phone-box">
+          <span class="icon">📞</span>
+          <a href="tel:01234567890" class="phone-number">01234 567 890</a>
+        </div>
+        <p class="cta-sub">Free consultation. No sales jargon.</p>
+        <a href="/contact" class="btn btn-primary full-width">或者 Get a Quote Online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-split {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 120px 0 60px;
+    background: transparent;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    background: linear-gradient(
+      to bottom,
+      #1e3a8a 0%,
+      #1e3a8a 50%,
+      #1e40af 60%,
+      #3b82f6 75%,
+      #93c5fd 88%,
+      #ffffff 100%
+    );
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.3), transparent 60%);
+    z-index: 0;
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+
+  .split-layout {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  /* Left Side: Text */
+  .hero-text {
+    padding-right: 2rem;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(34, 197, 94, 0.4);
+    animation: pulse 2s infinite;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    color: #000000;
+  }
+
+  .highlight {
+    color: #000000;
+    background: linear-gradient(90deg, #000000, #1f2937);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 550px;
+  }
+
+  .features-mini {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 500;
+    color: #1f2937;
+  }
+
+  /* Right Side: CTA Card */
+  .hero-cta {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .cta-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.02) 30%,
+      transparent 70%
+    );
+    filter: blur(60px);
+    animation: lensFlare 8s ease-in-out infinite alternate;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .cta-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes lensFlare {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(10%, -10%) scale(1.2);
+      opacity: 0.8;
+    }
+  }
+
+  .cta-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+  }
+
+  .cta-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+  }
+
+  .cta-header p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #4b5563;
+  }
+
+  .phone-box {
+    background: #000000;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .phone-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .phone-box .icon {
+    font-size: 1.5rem;
+  }
+
+  .phone-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    font-family: var(--font-heading);
+    white-space: nowrap;
+  }
+
+  .cta-sub {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+  }
+
+  .full-width {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  /* Animations */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @media (max-width: 900px) {
+    .split-layout {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+
+    .hero-text {
+      padding-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+    
+    .phone-number {
+      font-size: 1.4rem;
+    }
+  }
+</style>

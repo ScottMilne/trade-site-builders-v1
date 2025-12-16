@@ -1,0 +1,376 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-background">
+    <div class="hero-blur-1"></div>
+    <div class="hero-blur-2"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Specialists in Websites for Trades
+    </div>
+    <h1 class="hero-title">
+      Websites That Actually <br class="hero-break" />
+      <span class="hero-highlight">Get The Phone Ringing</span>
+    </h1>
+    <p class="hero-description">
+      Stop losing jobs to competitors with better websites. We build high-performance sites specifically for plumbers, electricians, builders, and landscapers.
+    </p>
+    <div class="hero-cta">
+      <a href="tel:08001234567" class="btn-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-phone">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        0800 123 4567
+      </a>
+      <a href="#portfolio" class="cta-secondary">
+        View Our Work
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cta-arrow">
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Plumbers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">40+</div>
+        <div class="stat-label">Electricians</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Builders</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10k+</div>
+        <div class="stat-label">Calls Generated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding-top: 128px;
+    padding-bottom: 80px;
+    background: var(--color-navy-900);
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .hero-blur-1 {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 1000px;
+    height: 1000px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+
+  .hero-blur-2 {
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    width: 1000px;
+    height: 1000px;
+    background: rgba(251, 191, 36, 0.05);
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-gold-500);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-gold-500);
+    margin-right: 0.5rem;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+  }
+
+  .hero-break {
+    display: none;
+  }
+
+  .hero-highlight {
+    background: linear-gradient(to right, var(--color-gold-500), #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-description {
+    max-width: 42rem;
+    margin: 0 auto 3rem;
+    font-size: 1.25rem;
+    color: #9ca3af;
+    line-height: 1.75;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .btn-phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    padding: 0.5rem 1.5rem;
+    height: 36px;
+    background: var(--color-gold-500);
+    color: var(--color-navy-900);
+    border-radius: 9999px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    opacity: 0;
+  }
+
+  .btn-phone:hover {
+    background: var(--color-gold-600);
+  }
+
+  .icon-phone {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+  }
+
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: white;
+    border-radius: 9999px;
+    padding: 1.5rem 2rem;
+    font-size: 1.125rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    opacity: 0;
+  }
+
+  .cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .cta-arrow {
+    width: 20px;
+    height: 20px;
+    margin-left: 0.5rem;
+  }
+
+  .hero-stats {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-label {
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: 640px) {
+    .hero-cta {
+      flex-direction: row;
+    }
+    .cta-phone {
+      width: auto;
+    }
+    .hero-stats {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      padding-top: 192px;
+      padding-bottom: 128px;
+    }
+    .hero-title {
+      font-size: 4.5rem;
+    }
+    .hero-break {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: 5rem;
+    }
+  }
+</style>
+
+<script>
+  function waitForGSAP(callback) {
+    if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
+      callback();
+    } else {
+      setTimeout(() => waitForGSAP(callback), 50);
+    }
+  }
+
+  function initAnimations() {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Hero animations
+    const heroTimeline = gsap.timeline();
+    
+    // Animate blur backgrounds
+    gsap.to('.hero-blur-1', {
+      x: 100,
+      y: -100,
+      duration: 20,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power1.inOut'
+    });
+    
+    gsap.to('.hero-blur-2', {
+      x: -100,
+      y: 100,
+      duration: 25,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power1.inOut'
+    });
+    
+    // Set initial states
+    gsap.set('.btn-phone', { opacity: 0, y: -20 });
+    gsap.set('.cta-secondary', { opacity: 0, y: 30 });
+    
+    // Animate hero content
+    heroTimeline
+      .from('.hero-badge', {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: 'power3.out'
+      })
+      .from('.hero-title', {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power3.out'
+      }, '-=0.5')
+      .from('.hero-description', {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: 'power3.out'
+      }, '-=0.6')
+      .to('.btn-phone', {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.4,
+        ease: 'power3.out'
+      }, '-=0.4')
+      .to('.cta-secondary', {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: 'power3.out'
+      }, '-=0.4')
+      .from('.stat-item', {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'power3.out'
+      }, '-=0.4');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      waitForGSAP(initAnimations);
+    });
+  } else {
+    waitForGSAP(initAnimations);
+  }
+</script>
+

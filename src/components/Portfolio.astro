@@ -1,0 +1,358 @@
+---
+---
+
+<section id="portfolio" class="portfolio-section">
+  <div class="portfolio-container">
+    <div class="portfolio-header">
+      <div class="portfolio-header-content">
+        <h2 class="portfolio-label">Our Work</h2>
+        <h3 class="portfolio-title">Proven Results For Trades</h3>
+      </div>
+      <button class="portfolio-button">View All Projects</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-image-wrapper">
+          <div class="portfolio-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=2000&auto=format&fit=crop" alt="Elite Plumbing & Heating" class="portfolio-image" />
+          <span class="portfolio-badge">Plumbing</span>
+        </div>
+        <div class="portfolio-content">
+          <h4 class="portfolio-card-title">Elite Plumbing & Heating</h4>
+          <div class="portfolio-footer">
+            <div class="portfolio-result">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="result-icon">
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+              +150% Leads in 30 Days
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-image-wrapper">
+          <div class="portfolio-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2000&auto=format&fit=crop" alt="MasterCraft Builders" class="portfolio-image" />
+          <span class="portfolio-badge">Construction</span>
+        </div>
+        <div class="portfolio-content">
+          <h4 class="portfolio-card-title">MasterCraft Builders</h4>
+          <div class="portfolio-footer">
+            <div class="portfolio-result">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="result-icon">
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+              Fully Booked for 6 Months
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-image-wrapper">
+          <div class="portfolio-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2000&auto=format&fit=crop" alt="BrightSpark Electrical" class="portfolio-image" />
+          <span class="portfolio-badge">Electrical</span>
+        </div>
+        <div class="portfolio-content">
+          <h4 class="portfolio-card-title">BrightSpark Electrical</h4>
+          <div class="portfolio-footer">
+            <div class="portfolio-result">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="result-icon">
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+              3x Return on Ad Spend
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-section {
+    padding: 6rem 0;
+    background: white;
+  }
+
+  .portfolio-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .portfolio-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-header-content {
+    max-width: 42rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-gold-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .portfolio-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-navy-900);
+  }
+
+  .portfolio-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    height: 2.25rem;
+    padding: 0 1rem;
+    border: 1px solid var(--color-navy-900);
+    background: white;
+    color: var(--color-navy-900);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .portfolio-button:hover {
+    background: var(--color-navy-900);
+    color: white;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portfolio-card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-image-wrapper {
+    position: relative;
+    height: 16rem;
+    overflow: hidden;
+  }
+
+  .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 47, 0.2);
+    z-index: 10;
+    transition: background 0.3s;
+  }
+
+  .portfolio-card:hover .portfolio-overlay {
+    background: transparent;
+  }
+
+  .portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.7s;
+  }
+
+  .portfolio-card:hover .portfolio-image {
+    transform: scale(1.1);
+  }
+
+  .portfolio-badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 20;
+    background: var(--color-gold-500);
+    color: var(--color-navy-900);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .portfolio-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-navy-900);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+  }
+
+  .portfolio-card:hover .portfolio-card-title {
+    color: var(--color-gold-600);
+  }
+
+  .portfolio-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .portfolio-result {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .result-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .portfolio-header {
+      flex-direction: row;
+    }
+    .portfolio-header-content {
+      margin-bottom: 0;
+    }
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio-title {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio-title {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<script>
+  function waitForGSAP(callback) {
+    if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
+      callback();
+    } else {
+      setTimeout(() => waitForGSAP(callback), 50);
+    }
+  }
+
+  function initAnimations() {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Portfolio header animation
+    gsap.from('.portfolio-header', {
+      scrollTrigger: {
+        trigger: '.portfolio-section',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: 'power3.out'
+    });
+    
+    // Portfolio cards animation
+    gsap.from('.portfolio-card', {
+      scrollTrigger: {
+        trigger: '.portfolio-grid',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 80,
+      scale: 0.9,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+    
+    // Enhanced hover animations
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      const image = card.querySelector('.portfolio-image');
+      const overlay = card.querySelector('.portfolio-overlay');
+      
+      card.addEventListener('mouseenter', () => {
+        gsap.to(image, {
+          scale: 1.1,
+          duration: 0.7,
+          ease: 'power2.out'
+        });
+        gsap.to(overlay, {
+          opacity: 0,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+        gsap.to(card, {
+          y: -10,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        gsap.to(image, {
+          scale: 1,
+          duration: 0.7,
+          ease: 'power2.out'
+        });
+        gsap.to(overlay, {
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+        gsap.to(card, {
+          y: 0,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      waitForGSAP(initAnimations);
+    });
+  } else {
+    waitForGSAP(initAnimations);
+  }
+</script>
+
