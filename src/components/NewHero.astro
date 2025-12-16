@@ -19,8 +19,8 @@
       Stop losing jobs to competitors with better websites. We build high-performance sites specifically for plumbers, electricians, builders, and landscapers.
     </p>
     <div class="hero-cta">
-      <a href="tel:08001234567" class="btn-phone">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-phone">
+      <a href="tel:08001234567" class="cta-phone-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="phone-icon">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
         0800 123 4567
@@ -171,32 +171,42 @@
     margin-bottom: 4rem;
   }
 
-  .btn-phone {
-    display: inline-flex;
+  .cta-phone-button {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    white-space: nowrap;
-    font-size: 0.875rem;
-    font-weight: 600;
-    transition: all 0.2s;
-    padding: 0.5rem 1.5rem;
-    height: 36px;
     background: var(--color-gold-500);
     color: var(--color-navy-900);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1.5rem 2.5rem;
     border-radius: 9999px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.2);
     opacity: 0;
   }
 
-  .btn-phone:hover {
+  .cta-phone-button:hover {
     background: var(--color-gold-600);
+    transform: scale(1.05);
   }
 
-  .icon-phone {
-    width: 16px;
-    height: 16px;
-    margin-right: 0.5rem;
+  .phone-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.75rem;
+  }
+
+  .cta-phone-button:hover .phone-icon {
+    animation: bounce 1s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
   }
 
   .cta-secondary {
@@ -320,7 +330,7 @@
     });
     
     // Set initial states
-    gsap.set('.btn-phone', { opacity: 0, y: -20 });
+    gsap.set('.cta-phone-button', { opacity: 0, y: 30 });
     gsap.set('.cta-secondary', { opacity: 0, y: 30 });
     
     // Animate hero content
@@ -343,10 +353,10 @@
         duration: 0.8,
         ease: 'power3.out'
       }, '-=0.6')
-      .to('.btn-phone', {
+      .to('.cta-phone-button', {
         y: 0,
         opacity: 1,
-        duration: 0.5,
+        duration: 0.8,
         delay: 0.4,
         ease: 'power3.out'
       }, '-=0.4')
@@ -363,6 +373,36 @@
         stagger: 0.1,
         ease: 'power3.out'
       }, '-=0.4');
+    
+    // Button hover animations
+    const phoneButton = document.querySelector('.cta-phone-button');
+    if (phoneButton) {
+      phoneButton.addEventListener('mouseenter', () => {
+        gsap.to(phoneButton, {
+          scale: 1.05,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+        gsap.to(phoneButton.querySelector('.phone-icon'), {
+          rotation: 15,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+      
+      phoneButton.addEventListener('mouseleave', () => {
+        gsap.to(phoneButton, {
+          scale: 1,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+        gsap.to(phoneButton.querySelector('.phone-icon'), {
+          rotation: 0,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
