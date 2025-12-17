@@ -226,28 +226,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					});
 				});
 				
-				// Parallax effect for hero blur elements
-				window.addEventListener('scroll', () => {
-					const scrolled = window.scrollY;
-					const heroBlur1 = document.querySelector('.hero-blur-1');
-					const heroBlur2 = document.querySelector('.hero-blur-2');
-					
-					if (heroBlur1) {
-						gsap.to(heroBlur1, {
-							y: scrolled * 0.3,
-							duration: 0.1,
-							ease: 'none'
-						});
-					}
-					
-					if (heroBlur2) {
-						gsap.to(heroBlur2, {
-							y: -scrolled * 0.2,
-							duration: 0.1,
-							ease: 'none'
-						});
-					}
-				});
 			}
 
 			if (document.readyState === 'loading') {

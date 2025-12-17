@@ -16,21 +16,21 @@ const today = new Date();
 			</div>
 			
 			<div class="footer-links">
-				<h4 class="footer-heading">Services</h4>
+				<h4 class="footer-heading">Trades</h4>
 				<ul class="footer-list">
-					<li><a href="#">Web Design</a></li>
-					<li><a href="#">SEO for Trades</a></li>
-					<li><a href="#">PPC Management</a></li>
-					<li><a href="#">Lead Generation</a></li>
+					<li><a href="/trades/plumbers">Plumbers</a></li>
+					<li><a href="/trades/electricians">Electricians</a></li>
+					<li><a href="/trades/builders">Builders</a></li>
+					<li><a href="/trades/landscapers">Landscapers</a></li>
 				</ul>
+				<a href="/trades" class="footer-view-more">View More →</a>
 			</div>
 
 			<div class="footer-links">
 				<h4 class="footer-heading">Company</h4>
 				<ul class="footer-list">
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Our Work</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="/work">Our Work</a></li>
+					<li><a href="/pricing">Pricing</a></li>
 					<li><a href="#">Privacy Policy</a></li>
 				</ul>
 			</div>
@@ -129,6 +129,20 @@ const today = new Date();
 
 	.footer-list a:hover {
 		color: var(--color-gold-500);
+	}
+
+	.footer-view-more {
+		display: inline-block;
+		margin-top: 1rem;
+		color: var(--color-gold-500);
+		font-size: 0.875rem;
+		font-weight: 600;
+		transition: color 0.2s;
+		text-decoration: none;
+	}
+
+	.footer-view-more:hover {
+		color: var(--color-gold-400);
 	}
 
 	.footer-phone {
