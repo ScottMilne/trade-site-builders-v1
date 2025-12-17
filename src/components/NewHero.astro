@@ -33,24 +33,6 @@
         </svg>
       </a>
     </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-number">50+</div>
-        <div class="stat-label">Plumbers</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">40+</div>
-        <div class="stat-label">Electricians</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">100+</div>
-        <div class="stat-label">Builders</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">10k+</div>
-        <div class="stat-label">Calls Generated</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -168,7 +150,6 @@
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 4rem;
   }
 
   .cta-phone-button {
@@ -236,42 +217,12 @@
     margin-left: 0.5rem;
   }
 
-  .hero-stats {
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-number {
-    font-size: 1.875rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 0.25rem;
-  }
-
-  .stat-label {
-    color: #6b7280;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
   @media (min-width: 640px) {
     .hero-cta {
       flex-direction: row;
     }
     .cta-phone {
       width: auto;
-    }
-    .hero-stats {
-      grid-template-columns: repeat(4, 1fr);
     }
   }
 
@@ -338,41 +289,33 @@
       .from('.hero-badge', {
         opacity: 0,
         y: 30,
-        duration: 0.8,
+        duration: 0.5,
         ease: 'power3.out'
       })
       .from('.hero-title', {
         opacity: 0,
         y: 50,
-        duration: 1,
+        duration: 0.6,
         ease: 'power3.out'
-      }, '-=0.5')
+      }, '-=0.3')
       .from('.hero-description', {
         opacity: 0,
         y: 30,
-        duration: 0.8,
+        duration: 0.5,
         ease: 'power3.out'
-      }, '-=0.6')
+      }, '-=0.4')
       .to('.cta-phone-button', {
         y: 0,
         opacity: 1,
-        duration: 0.8,
-        delay: 0.4,
+        duration: 0.5,
         ease: 'power3.out'
-      }, '-=0.4')
+      }, '-=0.3')
       .to('.cta-secondary', {
         y: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 0.5,
         ease: 'power3.out'
-      }, '-=0.4')
-      .from('.stat-item', {
-        opacity: 0,
-        y: 20,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power3.out'
-      }, '-=0.4');
+      }, '-=0.5');
     
     // Button hover animations
     const phoneButton = document.querySelector('.cta-phone-button');
