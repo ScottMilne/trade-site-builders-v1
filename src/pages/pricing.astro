@@ -30,105 +30,52 @@ import { SITE_TITLE } from '../consts';
 			<!-- Pricing Cards -->
 			<section style="padding: 6rem 0; background: white;">
 				<div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
-					<div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start;">
+					<div style="text-align: center; margin-bottom: 3rem;">
+						<h2 style="font-size: 2.5rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Two Options</h2>
+						<p style="font-size: 1.125rem; color: #475569; max-width: 42rem; margin: 0 auto;">Choose the option that best fits your business needs.</p>
+					</div>
+					<div class="pricing-grid">
 						<!-- Rent Option -->
-						<div class="pricing-card" style="background: white; border-radius: 1.5rem; padding: 3rem; border: 2px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s; position: relative;">
-							<div style="text-align: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 2rem; margin-bottom: 2rem;">
-								<h2 style="font-size: 2rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Rent</h2>
+						<div class="pricing-card popular" style="background: var(--color-navy-900); border-radius: 1.5rem; padding: 3rem; border: 2px solid var(--color-gold-500); box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.2); transition: all 0.3s; position: relative;">
+							<div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-gold-500); color: var(--color-navy-900); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.875rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">
+								Most Popular
+							</div>
+							<div style="text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 2rem; margin-bottom: 2rem;">
+								<h2 style="font-size: 2rem; font-weight: bold; color: white; margin-bottom: 1rem;">Rent</h2>
 								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
 									<span style="font-size: 3rem; font-weight: 900; color: var(--color-gold-500);">£300</span>
 								</div>
-								<p style="color: #475569; font-size: 0.875rem; margin-bottom: 1rem;">One-time setup fee</p>
+								<p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 1rem;">One-time setup fee</p>
 								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;">
-									<span style="font-size: 1.5rem; font-weight: bold; color: var(--color-navy-900);">+ £100</span>
-									<span style="font-size: 1rem; font-weight: normal; color: #475569;">/month</span>
+									<span style="font-size: 1.5rem; font-weight: bold; color: white;">+ £100</span>
+									<span style="font-size: 1rem; font-weight: normal; color: #9ca3af;">/month</span>
 								</div>
-								<p style="color: #475569; font-size: 0.875rem; margin-top: 0.5rem;">All-inclusive package</p>
+								<p style="color: #9ca3af; font-size: 0.875rem; margin-top: 0.5rem;">All-inclusive package</p>
 							</div>
-							<ul style="list-style: none; padding: 0; margin: 2rem 0;">
-								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+							<ul style="list-style: none; padding: 0; margin: 2rem 0; flex-grow: 1;">
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
 										<path d="M20 6 9 17l-5-5"></path>
 									</svg>
 									<span style="font-size: 1rem;">Full website design & development</span>
 								</li>
-								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
 										<path d="M20 6 9 17l-5-5"></path>
 									</svg>
 									<span style="font-size: 1rem;">Hosting included</span>
 								</li>
-								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
 										<path d="M20 6 9 17l-5-5"></path>
 									</svg>
 									<span style="font-size: 1rem;">All updates & maintenance</span>
 								</li>
-								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
 										<path d="M20 6 9 17l-5-5"></path>
 									</svg>
 									<span style="font-size: 1rem;">Ongoing support & updates</span>
-								</li>
-								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
-										<path d="M20 6 9 17l-5-5"></path>
-									</svg>
-									<span style="font-size: 1rem;">SEO optimization included</span>
-								</li>
-								<li style="padding: 1rem 0; color: #1e293b; display: flex; align-items: start;">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
-										<path d="M20 6 9 17l-5-5"></path>
-									</svg>
-									<span style="font-size: 1rem;">Cancel anytime - no long-term contract</span>
-								</li>
-							</ul>
-							<a href="tel:07700171266" style="display: block; text-align: center; background: var(--color-gold-500); color: var(--color-navy-900); font-weight: 600; padding: 1rem 2rem; border-radius: 9999px; text-decoration: none; transition: all 0.2s; margin-top: 2rem;">
-								Get Started
-							</a>
-						</div>
-
-						<!-- Buy Option -->
-						<div class="pricing-card popular" style="background: var(--color-navy-900); border-radius: 1.5rem; padding: 3rem; border: 2px solid var(--color-gold-500); box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.2); transition: all 0.3s; position: relative; transform: scale(1.05);">
-							<div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-gold-500); color: var(--color-navy-900); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.875rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">
-								Most Popular
-							</div>
-							<div style="text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 2rem; margin-bottom: 2rem;">
-								<h2 style="font-size: 2rem; font-weight: bold; color: white; margin-bottom: 1rem;">Buy</h2>
-								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-									<span style="font-size: 3rem; font-weight: 900; color: var(--color-gold-500);">£995</span>
-								</div>
-								<p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 1rem;">One-time payment</p>
-								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;">
-									<span style="font-size: 1.5rem; font-weight: bold; color: white;">+ £25</span>
-									<span style="font-size: 1rem; font-weight: normal; color: #9ca3af;">/month hosting</span>
-								</div>
-								<p style="color: #9ca3af; font-size: 0.875rem; margin-top: 0.5rem;">Own your website</p>
-							</div>
-							<ul style="list-style: none; padding: 0; margin: 2rem 0;">
-								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
-										<path d="M20 6 9 17l-5-5"></path>
-									</svg>
-									<span style="font-size: 1rem;">Full website design & development</span>
-								</li>
-								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
-										<path d="M20 6 9 17l-5-5"></path>
-									</svg>
-									<span style="font-size: 1rem;">You own the website completely</span>
-								</li>
-								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
-										<path d="M20 6 9 17l-5-5"></path>
-									</svg>
-									<span style="font-size: 1rem;">Low monthly hosting fee (£25/month)</span>
-								</li>
-								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
-										<path d="M20 6 9 17l-5-5"></path>
-									</svg>
-									<span style="font-size: 1rem;">Full source code access</span>
 								</li>
 								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
@@ -140,10 +87,67 @@ import { SITE_TITLE } from '../consts';
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
 										<path d="M20 6 9 17l-5-5"></path>
 									</svg>
+									<span style="font-size: 1rem;">Cancel anytime - no long-term contract</span>
+								</li>
+							</ul>
+							<a href="tel:07700171266" style="display: block; text-align: center; background: var(--color-gold-500); color: var(--color-navy-900); font-weight: 600; padding: 1rem 2rem; border-radius: 9999px; text-decoration: none; transition: all 0.2s; margin-top: auto;">
+								Get Started
+							</a>
+						</div>
+
+						<!-- Buy Option -->
+						<div class="pricing-card" style="background: white; border-radius: 1.5rem; padding: 3rem; border: 2px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s; position: relative;">
+							<div style="text-align: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 2rem; margin-bottom: 2rem;">
+								<h2 style="font-size: 2rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Buy</h2>
+								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+									<span style="font-size: 3rem; font-weight: 900; color: var(--color-gold-500);">£995</span>
+								</div>
+								<p style="color: #475569; font-size: 0.875rem; margin-bottom: 1rem;">One-time payment</p>
+								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;">
+									<span style="font-size: 1.5rem; font-weight: bold; color: var(--color-navy-900);">+ £25</span>
+									<span style="font-size: 1rem; font-weight: normal; color: #475569;">/month hosting</span>
+								</div>
+								<p style="color: #475569; font-size: 0.875rem; margin-top: 0.5rem;">Own your website</p>
+							</div>
+							<ul style="list-style: none; padding: 0; margin: 2rem 0; flex-grow: 1;">
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Full website design & development</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">You own the website completely</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Low monthly hosting fee (£25/month)</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Full source code access</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">SEO optimization included</span>
+								</li>
+								<li style="padding: 1rem 0; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
 									<span style="font-size: 1rem;">1 year of support included</span>
 								</li>
 							</ul>
-							<a href="tel:07700171266" style="display: block; text-align: center; background: var(--color-gold-500); color: var(--color-navy-900); font-weight: 600; padding: 1rem 2rem; border-radius: 9999px; text-decoration: none; transition: all 0.2s; margin-top: 2rem;">
+							<a href="tel:07700171266" style="display: block; text-align: center; background: var(--color-gold-500); color: var(--color-navy-900); font-weight: 600; padding: 1rem 2rem; border-radius: 9999px; text-decoration: none; transition: all 0.2s; margin-top: auto;">
 								Get Started
 							</a>
 						</div>
@@ -151,45 +155,102 @@ import { SITE_TITLE } from '../consts';
 				</div>
 			</section>
 
-			<!-- Comparison Section -->
-			<section style="padding: 6rem 0; background: #f8fafc;">
-				<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+			<!-- Pitch Section -->
+			<section style="padding: 6rem 0; background: var(--color-navy-900); position: relative; overflow: hidden;">
+				<div style="position: absolute; inset: 0; opacity: 0.1; background-image: radial-gradient(rgb(251, 191, 36) 1px, transparent 1px); background-size: 30px 30px;"></div>
+				<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem; position: relative; z-index: 10;">
 					<div style="text-align: center; margin-bottom: 4rem;">
-						<h2 style="font-size: 2.5rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Which Option Is Right For You?</h2>
-						<p style="font-size: 1.125rem; color: #475569; max-width: 42rem; margin: 0 auto;">Choose Rent if you want everything handled for you. Choose Buy if you want to own your website.</p>
+						<h2 style="font-size: 2.5rem; font-weight: bold; color: white; margin-bottom: 1.5rem; line-height: 1.2;">Which Option Is Right For You?</h2>
+						<p style="font-size: 1.25rem; color: #9ca3af; max-width: 42rem; margin: 0 auto; line-height: 1.75;">Both options get you a professional website. Choose based on what fits your business model.</p>
 					</div>
-					<div style="max-width: 800px; margin: 0 auto; background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
-						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
-							<div style="font-weight: 600; color: var(--color-navy-900);"></div>
-							<div style="text-align: center; font-weight: 600; color: var(--color-navy-900);">Rent</div>
-							<div style="text-align: center; font-weight: 600; color: var(--color-navy-900);">Buy</div>
+					<div style="display: grid; grid-template-columns: 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;" class="pitch-grid">
+						<div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+							<h3 style="font-size: 1.75rem; font-weight: bold; color: var(--color-gold-500); margin-bottom: 1rem; text-align: center;">Choose Rent If...</h3>
+							<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 2rem; backdrop-filter: blur(10px);">
+								<div style="display: flex; align-items: start; gap: 1.5rem;">
+									<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy-900)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<div>
+										<h4 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">You want zero technical headaches</h4>
+										<p style="color: #cbd5e1; line-height: 1.75; font-size: 1rem;">We handle hosting, updates, and maintenance. Focus on your trade, not your website.</p>
+									</div>
+								</div>
+							</div>
+							<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 2rem; backdrop-filter: blur(10px);">
+								<div style="display: flex; align-items: start; gap: 1.5rem;">
+									<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+										<i data-lucide="pound-sterling" style="width: 20px; height: 20px; color: var(--color-navy-900);"></i>
+									</div>
+									<div>
+										<h4 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">You prefer low upfront cost</h4>
+										<p style="color: #cbd5e1; line-height: 1.75; font-size: 1rem;">Start with just £300 setup. Perfect if you want to get online quickly without a large initial investment.</p>
+									</div>
+								</div>
+							</div>
+							<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 2rem; backdrop-filter: blur(10px);">
+								<div style="display: flex; align-items: start; gap: 1.5rem;">
+									<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy-900)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+										</svg>
+									</div>
+									<div>
+										<h4 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">You want flexibility</h4>
+										<p style="color: #cbd5e1; line-height: 1.75; font-size: 1rem;">Cancel anytime with no long-term commitment. Perfect if you're testing the waters or prefer monthly payments.</p>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
-							<div style="color: #475569;">Upfront Cost</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">£300</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">£995</div>
-						</div>
-						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
-							<div style="color: #475569;">Monthly Cost</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">£100</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">£25</div>
-						</div>
-						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
-							<div style="color: #475569;">Website Ownership</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">Rented</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">You Own It</div>
-						</div>
-						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
-							<div style="color: #475569;">Updates & Maintenance</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">Included</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">1 Year Included</div>
-						</div>
-						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0;">
-							<div style="color: #475569;">Contract</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">Cancel Anytime</div>
-							<div style="text-align: center; color: #1e293b; font-weight: 500;">No Contract</div>
+						<div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+							<h3 style="font-size: 1.75rem; font-weight: bold; color: var(--color-gold-500); margin-bottom: 1rem; text-align: center;">Choose Buy If...</h3>
+							<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 2rem; backdrop-filter: blur(10px);">
+								<div style="display: flex; align-items: start; gap: 1.5rem;">
+									<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy-900)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1z"></path>
+										</svg>
+									</div>
+									<div>
+										<h4 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">You want to own your website</h4>
+										<p style="color: #cbd5e1; line-height: 1.75; font-size: 1rem;">Full ownership and control. You own the code, can modify it, and move it anywhere you want.</p>
+									</div>
+								</div>
+							</div>
+							<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 2rem; backdrop-filter: blur(10px);">
+								<div style="display: flex; align-items: start; gap: 1.5rem;">
+									<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+										<i data-lucide="pound-sterling" style="width: 20px; height: 20px; color: var(--color-navy-900);"></i>
+									</div>
+									<div>
+										<h4 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">You prefer lower monthly costs</h4>
+										<p style="color: #cbd5e1; line-height: 1.75; font-size: 1rem;">Pay £995 upfront, then just £25/month for hosting. Better long-term value if you plan to keep the site for years.</p>
+									</div>
+								</div>
+							</div>
+							<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 2rem; backdrop-filter: blur(10px);">
+								<div style="display: flex; align-items: start; gap: 1.5rem;">
+									<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy-900)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+											<path d="M14 2v6h6"></path>
+											<path d="M16 13H8"></path>
+											<path d="M16 17H8"></path>
+											<path d="M10 9H8"></path>
+										</svg>
+									</div>
+									<div>
+										<h4 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">You want full control</h4>
+										<p style="color: #cbd5e1; line-height: 1.75; font-size: 1rem;">Access to source code means you can customize everything or have another developer work on it.</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+			
 				</div>
 			</section>
 
@@ -205,7 +266,7 @@ import { SITE_TITLE } from '../consts';
 			}
 
 			.pricing-card.popular:hover {
-				transform: scale(1.05) translateY(-10px);
+				transform: translateY(-10px);
 			}
 
 			.pricing-card a:hover {
@@ -213,9 +274,27 @@ import { SITE_TITLE } from '../consts';
 				transform: scale(1.02);
 			}
 
+			.pricing-grid {
+				display: flex;
+				flex-direction: column;
+				gap: 3rem;
+				align-items: stretch;
+			}
+
+			.pricing-card {
+				display: flex;
+				flex-direction: column;
+			}
+
 			@media (min-width: 768px) {
-				section:nth-of-type(2) > div > div {
-					grid-template-columns: repeat(2, 1fr);
+				.pricing-grid {
+					flex-direction: row;
+					align-items: stretch;
+				}
+				
+				.pricing-grid .pricing-card {
+					flex: 1;
+					height: 100%;
 				}
 			}
 
@@ -224,42 +303,28 @@ import { SITE_TITLE } from '../consts';
 					transform: scale(1);
 				}
 			}
+
+			.pitch-grid {
+				grid-template-columns: 1fr;
+			}
+
+			@media (min-width: 768px) {
+				.pitch-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
 		</style>
 
 		<script>
-			function waitForGSAP(callback) {
-				if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
-					callback();
-				} else {
-					setTimeout(() => waitForGSAP(callback), 50);
-				}
-			}
-
-			function initAnimations() {
-				gsap.registerPlugin(ScrollTrigger);
-				
-				gsap.set('.pricing-card', { opacity: 0, y: 50 });
-				
-				gsap.to('.pricing-card', {
-					scrollTrigger: {
-						trigger: '.pricing-card',
-						start: 'top 80%',
-						toggleActions: 'play none none none'
-					},
-					opacity: 1,
-					y: 0,
-					duration: 0.8,
-					stagger: 0.2,
-					ease: 'power3.out'
-				});
-			}
-
-			if (document.readyState === 'loading') {
-				document.addEventListener('DOMContentLoaded', () => {
-					waitForGSAP(initAnimations);
-				});
+			// Initialize Lucide icons
+			if (typeof lucide !== 'undefined') {
+				lucide.createIcons();
 			} else {
-				waitForGSAP(initAnimations);
+				document.addEventListener('DOMContentLoaded', () => {
+					if (typeof lucide !== 'undefined') {
+						lucide.createIcons();
+					}
+				});
 			}
 		</script>
 	</body>
