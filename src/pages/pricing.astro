@@ -1,151 +1,268 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import CTA from '../components/CTA.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`Pricing | ${SITE_TITLE}`} description="Simple, transparent pricing for trade websites." />
+		<BaseHead title={`Pricing | ${SITE_TITLE}`} description="Simple, transparent pricing for trade websites. Choose Rent or Buy." />
 	</head>
-	<body>
-		<Header />
-		<main class="container page-content">
-			<section class="section text-center">
-				<h1>Simple Pricing</h1>
-				<p class="lead">No hidden fees. Choose the package that fits your business.</p>
+	<body class="bg-white text-slate-900 font-sans antialiased">
+		<Navbar />
+		<main class="w-full min-h-screen flex flex-col" style="padding-top: 0px;">
+			<!-- Hero Section -->
+			<section style="padding: 8rem 0 6rem; background: var(--color-navy-900);">
+				<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem; text-align: center;">
+					<div style="display: inline-flex; align-items: center; padding: 0.5rem 1rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--color-gold-500); font-weight: 600; font-size: 0.875rem; margin-bottom: 2rem;">
+						Pricing
+					</div>
+					<h1 style="font-size: 3.5rem; font-weight: bold; color: white; margin-bottom: 1.5rem; line-height: 1.1;">
+						Simple, Transparent Pricing
+					</h1>
+					<p style="font-size: 1.25rem; color: #9ca3af; max-width: 42rem; margin: 0 auto; line-height: 1.75;">
+						No hidden fees. No confusing contracts. Choose the package that fits your business.
+					</p>
+				</div>
 			</section>
 
-			<div class="pricing-grid">
-				<!-- Starter -->
-				<div class="pricing-card">
-					<div class="header">
-						<h3>Starter</h3>
-						<div class="price">£499</div>
-						<p>Perfect for sole traders just starting out.</p>
-					</div>
-					<ul class="features-list">
-						<li>5 Page Website</li>
-						<li>Mobile Friendly Design</li>
-						<li>Contact Form</li>
-						<li>Google Maps Integration</li>
-						<li>Basic SEO Setup</li>
-					</ul>
-					<a href="/contact?plan=starter" class="btn btn-outline full-width">Get Started</a>
-				</div>
+			<!-- Pricing Cards -->
+			<section style="padding: 6rem 0; background: white;">
+				<div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+					<div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start;">
+						<!-- Rent Option -->
+						<div class="pricing-card" style="background: white; border-radius: 1.5rem; padding: 3rem; border: 2px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s; position: relative;">
+							<div style="text-align: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 2rem; margin-bottom: 2rem;">
+								<h2 style="font-size: 2rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Rent</h2>
+								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+									<span style="font-size: 3rem; font-weight: 900; color: var(--color-gold-500);">£300</span>
+								</div>
+								<p style="color: #475569; font-size: 0.875rem; margin-bottom: 1rem;">One-time setup fee</p>
+								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;">
+									<span style="font-size: 1.5rem; font-weight: bold; color: var(--color-navy-900);">+ £100</span>
+									<span style="font-size: 1rem; font-weight: normal; color: #475569;">/month</span>
+								</div>
+								<p style="color: #475569; font-size: 0.875rem; margin-top: 0.5rem;">All-inclusive package</p>
+							</div>
+							<ul style="list-style: none; padding: 0; margin: 2rem 0;">
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Full website design & development</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Hosting included</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">All updates & maintenance</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Ongoing support & updates</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid #f1f5f9; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">SEO optimization included</span>
+								</li>
+								<li style="padding: 1rem 0; color: #1e293b; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Cancel anytime - no long-term contract</span>
+								</li>
+							</ul>
+							<a href="tel:07700171266" style="display: block; text-align: center; background: var(--color-gold-500); color: var(--color-navy-900); font-weight: 600; padding: 1rem 2rem; border-radius: 9999px; text-decoration: none; transition: all 0.2s; margin-top: 2rem;">
+								Get Started
+							</a>
+						</div>
 
-				<!-- Pro -->
-				<div class="pricing-card popular">
-					<div class="badge">Most Popular</div>
-					<div class="header">
-						<h3>Professional</h3>
-						<div class="price">£999</div>
-						<p>For established businesses wanting to grow.</p>
+						<!-- Buy Option -->
+						<div class="pricing-card popular" style="background: var(--color-navy-900); border-radius: 1.5rem; padding: 3rem; border: 2px solid var(--color-gold-500); box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.2); transition: all 0.3s; position: relative; transform: scale(1.05);">
+							<div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-gold-500); color: var(--color-navy-900); padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.875rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">
+								Most Popular
+							</div>
+							<div style="text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 2rem; margin-bottom: 2rem;">
+								<h2 style="font-size: 2rem; font-weight: bold; color: white; margin-bottom: 1rem;">Buy</h2>
+								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+									<span style="font-size: 3rem; font-weight: 900; color: var(--color-gold-500);">£995</span>
+								</div>
+								<p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 1rem;">One-time payment</p>
+								<div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;">
+									<span style="font-size: 1.5rem; font-weight: bold; color: white;">+ £25</span>
+									<span style="font-size: 1rem; font-weight: normal; color: #9ca3af;">/month hosting</span>
+								</div>
+								<p style="color: #9ca3af; font-size: 0.875rem; margin-top: 0.5rem;">Own your website</p>
+							</div>
+							<ul style="list-style: none; padding: 0; margin: 2rem 0;">
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Full website design & development</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">You own the website completely</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Low monthly hosting fee (£25/month)</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">Full source code access</span>
+								</li>
+								<li style="padding: 1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">SEO optimization included</span>
+								</li>
+								<li style="padding: 1rem 0; color: white; display: flex; align-items: start;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 1rem; flex-shrink: 0;">
+										<path d="M20 6 9 17l-5-5"></path>
+									</svg>
+									<span style="font-size: 1rem;">1 year of support included</span>
+								</li>
+							</ul>
+							<a href="tel:07700171266" style="display: block; text-align: center; background: var(--color-gold-500); color: var(--color-navy-900); font-weight: 600; padding: 1rem 2rem; border-radius: 9999px; text-decoration: none; transition: all 0.2s; margin-top: 2rem;">
+								Get Started
+							</a>
+						</div>
 					</div>
-					<ul class="features-list">
-						<li>10 Page Website</li>
-						<li>Custom Design</li>
-						<li>Service Area SEO Pages</li>
-						<li>Gallery & Testimonials</li>
-						<li>Google Business Profile Setup</li>
-						<li>1 Month Free Support</li>
-					</ul>
-					<a href="/contact?plan=pro" class="btn btn-primary full-width">Get Started</a>
 				</div>
+			</section>
 
-				<!-- Enterprise -->
-				<div class="pricing-card">
-					<div class="header">
-						<h3>Empire</h3>
-						<div class="price">£1999+</div>
-						<p>Dominate your region with a massive digital presence.</p>
+			<!-- Comparison Section -->
+			<section style="padding: 6rem 0; background: #f8fafc;">
+				<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+					<div style="text-align: center; margin-bottom: 4rem;">
+						<h2 style="font-size: 2.5rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Which Option Is Right For You?</h2>
+						<p style="font-size: 1.125rem; color: #475569; max-width: 42rem; margin: 0 auto;">Choose Rent if you want everything handled for you. Choose Buy if you want to own your website.</p>
 					</div>
-					<ul class="features-list">
-						<li>Unlimited Pages</li>
-						<li>Advanced SEO Campaign</li>
-						<li>Booking System Integration</li>
-						<li>Logo & Brand Design</li>
-						<li>Priority Support</li>
-						<li>3 Months Free Support</li>
-					</ul>
-					<a href="/contact?plan=empire" class="btn btn-outline full-width">Contact Us</a>
+					<div style="max-width: 800px; margin: 0 auto; background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
+							<div style="font-weight: 600; color: var(--color-navy-900);"></div>
+							<div style="text-align: center; font-weight: 600; color: var(--color-navy-900);">Rent</div>
+							<div style="text-align: center; font-weight: 600; color: var(--color-navy-900);">Buy</div>
+						</div>
+						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
+							<div style="color: #475569;">Upfront Cost</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">£300</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">£995</div>
+						</div>
+						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
+							<div style="color: #475569;">Monthly Cost</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">£100</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">£25</div>
+						</div>
+						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
+							<div style="color: #475569;">Website Ownership</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">Rented</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">You Own It</div>
+						</div>
+						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #f1f5f9;">
+							<div style="color: #475569;">Updates & Maintenance</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">Included</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">1 Year Included</div>
+						</div>
+						<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem 0;">
+							<div style="color: #475569;">Contract</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">Cancel Anytime</div>
+							<div style="text-align: center; color: #1e293b; font-weight: 500;">No Contract</div>
+						</div>
+					</div>
 				</div>
-			</div>
+			</section>
+
+			<!-- CTA Section -->
+			<CTA />
 		</main>
 		<Footer />
+
+		<style>
+			.pricing-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+			}
+
+			.pricing-card.popular:hover {
+				transform: scale(1.05) translateY(-10px);
+			}
+
+			.pricing-card a:hover {
+				background: var(--color-gold-600);
+				transform: scale(1.02);
+			}
+
+			@media (min-width: 768px) {
+				section:nth-of-type(2) > div > div {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			@media (max-width: 767px) {
+				.pricing-card.popular {
+					transform: scale(1);
+				}
+			}
+		</style>
+
+		<script>
+			function waitForGSAP(callback) {
+				if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
+					callback();
+				} else {
+					setTimeout(() => waitForGSAP(callback), 50);
+				}
+			}
+
+			function initAnimations() {
+				gsap.registerPlugin(ScrollTrigger);
+				
+				gsap.set('.pricing-card', { opacity: 0, y: 50 });
+				
+				gsap.to('.pricing-card', {
+					scrollTrigger: {
+						trigger: '.pricing-card',
+						start: 'top 80%',
+						toggleActions: 'play none none none'
+					},
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					stagger: 0.2,
+					ease: 'power3.out'
+				});
+			}
+
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', () => {
+					waitForGSAP(initAnimations);
+				});
+			} else {
+				waitForGSAP(initAnimations);
+			}
+		</script>
 	</body>
 </html>
-
-<style>
-	.page-content { padding-top: 100px; }
-	.lead { font-size: 1.5rem; color: var(--color-text-muted); margin-bottom: 3rem; }
-
-	.pricing-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		align-items: center;
-	}
-
-	.pricing-card {
-		background: var(--color-bg-offset);
-		border-radius: 1rem;
-		padding: 2.5rem;
-		border: 1px solid var(--color-border);
-		position: relative;
-		transition: transform 0.3s;
-	}
-	
-	.pricing-card:hover {
-		transform: translateY(-5px);
-		border-color: var(--color-primary);
-	}
-
-	.pricing-card.popular {
-		border: 2px solid var(--color-primary);
-		transform: scale(1.05);
-		box-shadow: 0 10px 30px rgba(30, 64, 175, 0.15);
-		z-index: 10;
-	}
-
-	.badge {
-		position: absolute;
-		top: -12px;
-		left: 50%;
-		transform: translateX(-50%);
-		background: var(--color-primary);
-		color: white;
-		padding: 0.25rem 1rem;
-		border-radius: 20px;
-		font-size: 0.8rem;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-
-	.header { text-align: center; border-bottom: 1px solid var(--color-border); padding-bottom: 2rem; margin-bottom: 2rem; }
-	.price { font-size: 3rem; font-weight: 800; color: white; margin: 0.5rem 0; }
-	.header p { color: var(--color-text-muted); }
-
-	.features-list {
-		list-style: none;
-		padding: 0;
-		margin: 2rem 0;
-	}
-
-	.features-list li {
-		padding: 0.8rem 0;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-		text-align: center;
-		color: var(--color-text);
-	}
-
-	.features-list li:last-child { border-bottom: none; }
-
-	.full-width {
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
-</style>

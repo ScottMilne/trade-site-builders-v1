@@ -1,0 +1,88 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Our Work | ${SITE_TITLE}`} description="See examples of our website designs for tradespeople." />
+	</head>
+	<body class="bg-white text-slate-900 font-sans antialiased">
+		<Navbar />
+		<main class="w-full min-h-screen flex flex-col" style="padding-top: 0px;">
+			<section class="section text-center" style="padding: 6rem 0 4rem;">
+				<div class="container" style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+					<h1 style="font-size: 3.5rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1.5rem;">Our Work</h1>
+					<p style="font-size: 1.25rem; color: #475569; max-width: 42rem; margin: 0 auto;">Real websites we've built for real tradespeople.</p>
+				</div>
+			</section>
+
+			<section class="section" style="padding: 2rem 0 6rem;">
+				<div class="container" style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+					<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
+						<!-- Portfolio items will be added here -->
+						<div style="background: #f8fafc; border-radius: 0.75rem; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+								Website Design 1
+							</div>
+							<div style="padding: 1.5rem;">
+								<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Plumber Website</h3>
+								<p style="color: #475569; font-size: 0.875rem;">Modern, conversion-focused design</p>
+							</div>
+						</div>
+						<div style="background: #f8fafc; border-radius: 0.75rem; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+								Website Design 2
+							</div>
+							<div style="padding: 1.5rem;">
+								<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Electrician Website</h3>
+								<p style="color: #475569; font-size: 0.875rem;">Clean, professional layout</p>
+							</div>
+						</div>
+						<div style="background: #f8fafc; border-radius: 0.75rem; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+								Website Design 3
+							</div>
+							<div style="padding: 1.5rem;">
+								<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Builder Website</h3>
+								<p style="color: #475569; font-size: 0.875rem;">Showcase portfolio & services</p>
+							</div>
+						</div>
+						<div style="background: #f8fafc; border-radius: 0.75rem; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+								Website Design 4
+							</div>
+							<div style="padding: 1.5rem;">
+								<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Landscaper Website</h3>
+								<p style="color: #475569; font-size: 0.875rem;">Beautiful image galleries</p>
+							</div>
+						</div>
+						<div style="background: #f8fafc; border-radius: 0.75rem; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+								Website Design 5
+							</div>
+							<div style="padding: 1.5rem;">
+								<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Roofer Website</h3>
+								<p style="color: #475569; font-size: 0.875rem;">Mobile-first responsive design</p>
+							</div>
+						</div>
+						<div style="background: #f8fafc; border-radius: 0.75rem; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+								Website Design 6
+							</div>
+							<div style="padding: 1.5rem;">
+								<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Carpenter Website</h3>
+								<p style="color: #475569; font-size: 0.875rem;">Elegant craftsmanship showcase</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
