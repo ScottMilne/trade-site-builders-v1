@@ -1,192 +1,345 @@
 ---
+const services = [
+  {
+    title: "High-Converting Websites",
+    description: "Custom designed sites built to turn visitors into paying customers. Mobile-friendly and lightning fast.",
+    color: "bg-blue-50",
+    image: "https://images.unsplash.com/photo-1467232004564-c264e952691e?q=80&w=2336&auto=format&fit=crop",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>`
+  },
+  {
+    title: "Local SEO Domination",
+    description: "Get found when people search for \"plumber near me\" or \"best builder in town\". We optimize your entire footprint.",
+    color: "bg-green-50",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2348&auto=format&fit=crop",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`
+  },
+  {
+    title: "Lead Generation",
+    description: "Systems setup to capture leads automatically, so you never miss a quote request while on the job.",
+    color: "bg-orange-50",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2148&auto=format&fit=crop",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>`
+  },
+  {
+    title: "Trust & Credibility",
+    description: "Showcase your reviews, certifications, and past work to prove you are the best choice in your area.",
+    color: "bg-purple-50",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>`
+  },
+  {
+    title: "Google Ads Management",
+    description: "Instant leads while your SEO builds up. We manage your ad spend to maximize ROI and lower cost-per-lead.",
+    color: "bg-yellow-50",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>`
+  },
+  {
+    title: "Trade Specific Content",
+    description: "We know your industry. We write copy that speaks directly to homeowners and contractors.",
+    color: "bg-indigo-50",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2146&auto=format&fit=crop",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>`
+  }
+];
 ---
 
-<section id="services" class="services-section">
+<section id="services" class="services-wrapper">
   <div class="services-container">
     <div class="services-header">
       <h2 class="services-label">Our Services</h2>
       <h3 class="services-title">Everything You Need To Grow</h3>
-      <p class="services-description">We don't just build pretty websites. We build digital assets that work as hard as you do.</p>
+      <p class="services-main-desc">We don't just build pretty websites. We build digital assets that work as hard as you do.</p>
     </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="20" height="14" x="2" y="3" rx="2"></rect>
-            <line x1="8" x2="16" y1="21" y2="21"></line>
-            <line x1="12" x2="12" y1="17" y2="21"></line>
-          </svg>
-        </div>
-        <h4 class="service-title">High-Converting Websites</h4>
-        <p class="service-description">Custom designed sites built to turn visitors into paying customers. Mobile-friendly and lightning fast.</p>
+
+    <!-- The Horizontal Deck -->
+    <div class="deck-viewport">
+      <div class="deck-track">
+        {services.map((service, index) => (
+          <div class={`deck-card card-${index}`}>
+            <div class="card-image-wrapper">
+              <img src={service.image} alt={service.title} class="card-image" loading="lazy" />
+              <div class="card-overlay"></div>
+              <div class="card-icon-badge">
+                 <div class="icon-inner" set:html={service.svg} />
+              </div>
+            </div>
+            <div class="card-content">
+              <h4 class="card-title">{service.title}</h4>
+              <p class="card-desc">{service.description}</p>
+              <div class="card-footer">
+                <span class="learn-more">Learn more <span class="arrow">→</span></span>
+                <span class="card-number">0{index + 1}</span>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.3-4.3"></path>
-          </svg>
+      
+      <!-- Mobile Progress Indicator -->
+      <div class="mobile-progress">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
         </div>
-        <h4 class="service-title">Local SEO Domination</h4>
-        <p class="service-description">Get found when people search for "plumber near me" or "best builder in town".</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="14" height="20" x="5" y="2" rx="2"></rect>
-            <path d="M12 18h.01"></path>
-          </svg>
-        </div>
-        <h4 class="service-title">Lead Generation</h4>
-        <p class="service-description">Systems setup to capture leads automatically, so you never miss a quote request while on the job.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
-            <path d="m9 12 2 2 4-4"></path>
-          </svg>
-        </div>
-        <h4 class="service-title">Trust & Credibility</h4>
-        <p class="service-description">Showcase your reviews, certifications, and past work to prove you are the best choice.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
-          </svg>
-        </div>
-        <h4 class="service-title">Google Ads Management</h4>
-        <p class="service-description">Instant leads while your SEO builds up. We manage your ad spend to maximize ROI.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"></path>
-            <path d="m18 15 4-4"></path>
-            <path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path>
-          </svg>
-        </div>
-        <h4 class="service-title">Trade Specific Content</h4>
-        <p class="service-description">We know your industry. We write copy that speaks directly to homeowners and contractors.</p>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .services-section {
-    padding: 6rem 0;
-    background: white;
+  .services-wrapper {
+    background: #fff;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
   }
 
   .services-container {
-    max-width: 1280px;
+    max-width: 1400px; /* Wider container for the deck */
     margin: 0 auto;
     padding: 0 1rem;
+    height: 100%;
   }
 
   .services-header {
     text-align: center;
     max-width: 48rem;
-    margin: 0 auto 4rem;
-    opacity: 0;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
   }
 
   .services-label {
-    font-size: 1rem;
-    font-weight: bold;
     color: var(--color-gold-500);
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
   }
 
   .services-title {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
     color: var(--color-navy-900);
-    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
   }
 
-  .services-description {
-    font-size: 1.25rem;
-    color: #475569;
+  .services-main-desc {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.6;
   }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  /* DECK STYLES (Mobile First) */
+  .deck-viewport {
+    width: 100%;
+    /* Mobile: Enables horizontal scroll */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2rem;
+    
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .deck-viewport::-webkit-scrollbar { 
+    display: none; 
   }
 
-  .service-card {
-    border-radius: 0.75rem;
+  .deck-track {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem; /* Pad the start/end so first card isn't flush */
+    width: max-content; /* Allow content to dictate width */
+  }
+
+  .deck-card {
+    flex: 0 0 85vw; /* Mobile: Cards take up 85% of screen width */
+    scroll-snap-align: center;
+    background: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
     border: 1px solid #e2e8f0;
-    padding: 2rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 500px; /* Fixed height for consistency */
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .card-image-wrapper {
+    height: 50%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-image {
+    width: 100%;
     height: 100%;
-    background: #f8fafc;
-    transition: all 0.3s;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    opacity: 0;
+    object-fit: cover;
+    transition: transform 0.5s ease;
   }
 
-  .service-card:hover {
-    background: white;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
   }
 
-  .service-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+  .card-icon-badge {
+    position: absolute;
+    bottom: -1.5rem;
+    right: 1.5rem;
+    width: 4rem;
+    height: 4rem;
     background: var(--color-navy-900);
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
     color: white;
-    transition: all 0.3s;
+    z-index: 10;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
   }
 
-  .service-card:hover .service-icon {
-    background: var(--color-gold-500);
-    color: var(--color-navy-900);
+  .icon-inner {
+    width: 2rem;
+    height: 2rem;
   }
 
-  .service-icon svg {
-    width: 1.75rem;
-    height: 1.75rem;
+  .icon-inner svg {
+    width: 100%;
+    height: 100%;
   }
 
-  .service-title {
-    font-size: 1.25rem;
-    font-weight: bold;
+  .card-content {
+    padding: 2.5rem 2rem 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--color-navy-900);
     margin-bottom: 0.75rem;
+    line-height: 1.2;
   }
 
-  .service-description {
-    color: #475569;
-    line-height: 1.75;
+  .card-desc {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
-  @media (min-width: 768px) {
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .services-title {
-      font-size: 3rem;
-    }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.5rem;
   }
 
+  .learn-more {
+    color: var(--color-gold-500);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .deck-card:hover .arrow {
+    transform: translateX(5px);
+  }
+
+  .deck-card:hover .card-image {
+    transform: scale(1.05); /* Subtle zoom on hover */
+  }
+
+  .card-number {
+    font-family: monospace;
+    color: #cbd5e1;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  /* Mobile Progress Bar */
+  .mobile-progress {
+    width: 200px;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    margin: 2rem auto 0;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    width: 16.66%; /* 1/6th */
+    height: 100%;
+    background: var(--color-navy-900);
+    border-radius: 2px;
+    transition: transform 0.1s linear; /* JavaScript will drive this */
+  }
+
+
+  /* DESKTOP ENHANCEMENTS (GSAP Driven) */
   @media (min-width: 1024px) {
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
+    .services-wrapper {
+        padding: 8rem 0;
     }
+
     .services-title {
-      font-size: 3.5rem;
+        font-size: 3.5rem;
     }
+
+    /* Disable native scroll specific to mobile, let GSAP handle layout */
+    .deck-viewport {
+        overflow: visible; /* GSAP will pin user in place */
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .deck-track {
+        flex-wrap: nowrap;
+        width: fit-content; /* Ensure it calculates correctly */
+        padding: 0;
+        gap: 3rem; /* Larger gap on desktop */
+    }
+
+    .deck-card {
+        flex: 0 0 450px; /* Fixed robust width */
+        height: 600px;   /* Taller luxurious cards */
+        scroll-snap-align: none;
+    }
+
+    .mobile-progress {
+        display: none; /* Hide standard mobile bar */
+    }
+
+    /* Enable a parallax effect on images via JS or just CSS hover is fine, but lets prep for JS */
   }
 </style>
 
@@ -199,55 +352,75 @@
     }
   }
 
-  function initAnimations() {
+  function initDeckAnimations() {
     gsap.registerPlugin(ScrollTrigger);
     
-    // Set initial state for elements
-    gsap.set('.services-header', { opacity: 0, y: 50 });
-    gsap.set('.service-card', { opacity: 0, y: 50 });
+    // --- MOBILE SCROLL PROGRESS ---
+    // Simple listener for horizontal scroll on mobile
+    const viewport = document.querySelector('.deck-viewport');
+    const progressFill = document.querySelector('.progress-fill');
     
-    // Services header animation
-    gsap.to('.services-header', {
-      scrollTrigger: {
-        trigger: '.services-section',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: 'power3.out'
-    });
-    
-    // Service cards animation
-    gsap.to('.service-card', {
-      scrollTrigger: {
-        trigger: '.services-grid',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      },
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
-    
-    // Hover animations
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        gsap.to(card, {
-          y: -10,
-          duration: 0.3,
-          ease: 'power2.out'
+    if (viewport && progressFill) {
+        viewport.addEventListener('scroll', () => {
+            const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+            const scroll = viewport.scrollLeft;
+            const progress = scroll / maxScroll;
+            // Map 0-1 to translate X or width? 
+            // Width is easier but lets slide:
+            // Actually width 16% is base. We want to move it or grow it?
+            // Let's just create a sliding indicator:
+            // 0% -> translateX(0%), 100% -> translateX(500%) (since bar is 1/6th)
+            const percent = Math.min(Math.max(progress, 0), 1);
+            progressFill.style.transform = `translateX(${percent * 500}%)`;
         });
-      });
+    }
+
+
+    // --- DESKTOP SCROLLTRIGGER ---
+    const mm = gsap.matchMedia();
+    
+    mm.add("(min-width: 1024px)", () => {
+      const track = document.querySelector('.deck-track');
+      const cards = gsap.utils.toArray('.deck-card');
       
-      card.addEventListener('mouseleave', () => {
-        gsap.to(card, {
-          y: 0,
-          duration: 0.3,
-          ease: 'power2.out'
+      // Calculate total width to scroll
+      // We want to scroll until the last card is fully visible + some margin
+      const totalWidth = track.scrollWidth;
+      const amountToScroll = totalWidth - window.innerWidth + 400; // Increased padding from 100 to 300
+
+      // Logic: Pin the wrapper, move the track LEFT
+      const scrollTween = gsap.to(track, {
+        x: -amountToScroll,
+        ease: "none", // Linear movement tied to scroll
+        scrollTrigger: {
+          trigger: ".services-wrapper",
+          pin: true,           // Pin the section
+          scrub: 1,            // Smooth scrubbing
+          // "center center" means: Start when center of section hits center of viewport
+          // This allows the user to see the header fully before pinning starts
+          start: "center center-=100",    
+          
+          // Increase the scroll distance to make the animation slower/smoother
+          // +=2000 means the user has to scroll 2000px to complete the horizontal move
+          end: "+=2000", 
+          anticipatePin: 1
+        }
+      });
+
+      // Optional: Add Parallax to images inside cards as they move
+      cards.forEach(card => {
+        const img = card.querySelector('.card-image');
+        // Small parallax movement for "premium" feel
+        gsap.to(img, {
+            x: -50, // Move image slightly inside frame
+            ease: "none",
+            scrollTrigger: {
+                trigger: card,
+                containerAnimation: scrollTween, // Link to the horizontal scroll
+                start: "left right",
+                end: "right left",
+                scrub: true
+            }
         });
       });
     });
@@ -255,10 +428,9 @@
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      waitForGSAP(initAnimations);
+      waitForGSAP(initDeckAnimations);
     });
   } else {
-    waitForGSAP(initAnimations);
+    waitForGSAP(initDeckAnimations);
   }
 </script>
-
