@@ -155,8 +155,27 @@
 
   @media (max-width: 768px) {
     .navbar-links {
-      display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: rgba(10, 25, 47, 0.98);
+      backdrop-filter: blur(12px);
+      flex-direction: column;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
+
+    .navbar-links.mobile-open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
     .mobile-menu-toggle {
       display: block;
     }
@@ -164,6 +183,49 @@
 </style>
 
 <script>
+  // Mobile menu toggle
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const navbarLinks = document.querySelector('.navbar-links');
+
+  if (mobileMenuToggle && navbarLinks) {
+    mobileMenuToggle.addEventListener('click', () => {
+      navbarLinks.classList.toggle('mobile-open');
+      
+      // Toggle hamburger icon to X
+      const isOpen = navbarLinks.classList.contains('mobile-open');
+      if (isOpen) {
+        mobileMenuToggle.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        `;
+      } else {
+        mobileMenuToggle.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        `;
+      }
+    });
+
+    // Close menu when clicking a link
+    navbarLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navbarLinks.classList.remove('mobile-open');
+        mobileMenuToggle.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        `;
+      });
+    });
+  }
+
   // Scroll-based navbar background
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
