@@ -25,13 +25,6 @@
         </svg>
         07700 171 266
       </a>
-      <a href="#portfolio" class="cta-secondary">
-        View Our Work
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cta-arrow">
-          <path d="M5 12h14"></path>
-          <path d="m12 5 7 7-7 7"></path>
-        </svg>
-      </a>
     </div>
   </div>
 </section>
@@ -194,32 +187,6 @@
     }
   }
 
-  .cta-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-weight: 500;
-    transition: all 0.2s;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
-    color: white;
-    border-radius: 9999px;
-    padding: 1.5rem 2rem;
-    font-size: 1.125rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    opacity: 0;
-  }
-
-  .cta-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .cta-arrow {
-    width: 20px;
-    height: 20px;
-    margin-left: 0.5rem;
-  }
 
   @media (min-width: 640px) {
     .hero-cta {
@@ -268,7 +235,6 @@
     
     // Set initial states
     gsap.set('.cta-phone-button', { opacity: 0, y: 30 });
-    gsap.set('.cta-secondary', { opacity: 0, y: 30 });
     
     // Animate hero content
     heroTimeline
@@ -295,13 +261,7 @@
         opacity: 1,
         duration: 0.5,
         ease: 'power3.out'
-      }, '-=0.3')
-      .to('.cta-secondary', {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power3.out'
-      }, '-=0.5');
+      }, '-=0.3');
     
     // Button hover animations
     const phoneButton = document.querySelector('.cta-phone-button');

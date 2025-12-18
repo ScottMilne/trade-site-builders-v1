@@ -70,7 +70,6 @@ const services = [
               <p class="card-desc">{service.description}</p>
               <div class="card-footer">
                 <span class="learn-more">Learn more <span class="arrow">→</span></span>
-                <span class="card-number">0{index + 1}</span>
               </div>
             </div>
           </div>
@@ -96,7 +95,7 @@ const services = [
   }
 
   .services-container {
-    max-width: 1400px; /* Wider container for the deck */
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
     height: 100%;
@@ -135,15 +134,12 @@ const services = [
   /* DECK STYLES (Mobile First) */
   .deck-viewport {
     width: 100%;
-    /* Mobile: Enables horizontal scroll */
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 2rem;
-    
-    /* Hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -155,53 +151,60 @@ const services = [
   .deck-track {
     display: flex;
     gap: 1rem;
-    padding: 0 1rem; /* Pad the start/end so first card isn't flush */
-    width: max-content; /* Allow content to dictate width */
+    padding: 0 1rem;
+    width: max-content;
   }
 
   .deck-card {
-    flex: 0 0 85vw; /* Mobile: Cards take up 85% of screen width */
+    flex: 0 0 85vw;
     scroll-snap-align: center;
     background: #fff;
     border-radius: 1.5rem;
     overflow: hidden;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
-    height: 500px; /* Fixed height for consistency */
+    height: 500px;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    will-change: transform;
   }
 
   .card-image-wrapper {
-    height: 50%;
+    height: 45%;
     width: 100%;
     position: relative;
     overflow: hidden;
+    background: #f8fafc;
   }
 
   .card-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    object-position: center;
+    display: block;
+    will-change: transform;
+    transform: scale(1);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+    pointer-events: none;
   }
 
   .card-icon-badge {
     position: absolute;
-    bottom: -1.5rem;
-    right: 1.5rem;
-    width: 4rem;
-    height: 4rem;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background: var(--color-navy-900);
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,21 +214,27 @@ const services = [
   }
 
   .icon-inner {
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .icon-inner svg {
     width: 100%;
     height: 100%;
+    stroke-width: 2.5;
+    display: block;
   }
 
   .card-content {
-    padding: 2.5rem 2rem 2rem;
+    padding: 2rem 1.75rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #fff;
   }
 
   .card-title {
@@ -234,16 +243,16 @@ const services = [
     font-weight: 700;
     color: var(--color-navy-900);
     margin-bottom: 0.75rem;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 
   .card-desc {
     color: #64748b;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9375rem;
+    line-height: 1.65;
     margin-bottom: 1.5rem;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -252,8 +261,9 @@ const services = [
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1.25rem;
     border-top: 1px solid #f1f5f9;
-    padding-top: 1.5rem;
+    margin-top: auto;
   }
 
   .learn-more {
@@ -265,26 +275,31 @@ const services = [
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: color 0.3s ease;
   }
 
   .arrow {
     transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .deck-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .deck-card:hover .arrow {
-    transform: translateX(5px);
+    transform: translateX(4px);
   }
 
   .deck-card:hover .card-image {
-    transform: scale(1.05); /* Subtle zoom on hover */
+    transform: scale(1.08);
   }
 
-  .card-number {
-    font-family: monospace;
-    color: #cbd5e1;
-    font-size: 1.25rem;
-    font-weight: 700;
+  .deck-card:hover .learn-more {
+    color: var(--color-gold-600);
   }
+
 
   /* Mobile Progress Bar */
   .mobile-progress {
@@ -297,49 +312,62 @@ const services = [
   }
   
   .progress-fill {
-    width: 16.66%; /* 1/6th */
+    width: 16.66%;
     height: 100%;
     background: var(--color-navy-900);
     border-radius: 2px;
-    transition: transform 0.1s linear; /* JavaScript will drive this */
+    transition: transform 0.1s linear;
   }
 
-
-  /* DESKTOP ENHANCEMENTS (GSAP Driven) */
+  /* DESKTOP ENHANCEMENTS */
   @media (min-width: 1024px) {
     .services-wrapper {
-        padding: 8rem 0;
+      padding: 8rem 0;
     }
 
     .services-title {
-        font-size: 3.5rem;
+      font-size: 3.5rem;
     }
 
-    /* Disable native scroll specific to mobile, let GSAP handle layout */
     .deck-viewport {
-        overflow: visible; /* GSAP will pin user in place */
-        height: auto;
-        padding-bottom: 0;
+      overflow: visible;
+      height: auto;
+      padding-bottom: 0;
     }
 
     .deck-track {
-        flex-wrap: nowrap;
-        width: fit-content; /* Ensure it calculates correctly */
-        padding: 0;
-        gap: 3rem; /* Larger gap on desktop */
+      flex-wrap: nowrap;
+      width: fit-content;
+      padding: 0;
+      gap: 2.5rem;
     }
 
     .deck-card {
-        flex: 0 0 450px; /* Fixed robust width */
-        height: 600px;   /* Taller luxurious cards */
-        scroll-snap-align: none;
+      flex: 0 0 420px;
+      height: 580px;
+      scroll-snap-align: none;
+    }
+
+    .card-image-wrapper {
+      height: 48%;
+    }
+
+    .card-content {
+      padding: 2.25rem 2rem;
+    }
+
+    .card-title {
+      font-size: 1.625rem;
+    }
+
+    .card-desc {
+      font-size: 1rem;
+      -webkit-line-clamp: 4;
     }
 
     .mobile-progress {
-        display: none; /* Hide standard mobile bar */
+      display: none;
     }
-
-    /* Enable a parallax effect on images via JS or just CSS hover is fine, but lets prep for JS */
   }
 </style>
 
@@ -356,73 +384,44 @@ const services = [
     gsap.registerPlugin(ScrollTrigger);
     
     // --- MOBILE SCROLL PROGRESS ---
-    // Simple listener for horizontal scroll on mobile
     const viewport = document.querySelector('.deck-viewport');
     const progressFill = document.querySelector('.progress-fill');
     
     if (viewport && progressFill) {
-        viewport.addEventListener('scroll', () => {
-            const maxScroll = viewport.scrollWidth - viewport.clientWidth;
-            const scroll = viewport.scrollLeft;
-            const progress = scroll / maxScroll;
-            // Map 0-1 to translate X or width? 
-            // Width is easier but lets slide:
-            // Actually width 16% is base. We want to move it or grow it?
-            // Let's just create a sliding indicator:
-            // 0% -> translateX(0%), 100% -> translateX(500%) (since bar is 1/6th)
-            const percent = Math.min(Math.max(progress, 0), 1);
-            progressFill.style.transform = `translateX(${percent * 500}%)`;
-        });
+      viewport.addEventListener('scroll', () => {
+        const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+        const scroll = viewport.scrollLeft;
+        const progress = scroll / maxScroll;
+        const percent = Math.min(Math.max(progress, 0), 1);
+        progressFill.style.transform = `translateX(${percent * 500}%)`;
+      });
     }
-
 
     // --- DESKTOP SCROLLTRIGGER ---
     const mm = gsap.matchMedia();
     
     mm.add("(min-width: 1024px)", () => {
       const track = document.querySelector('.deck-track');
-      const cards = gsap.utils.toArray('.deck-card');
       
-      // Calculate total width to scroll
-      // We want to scroll until the last card is fully visible + some margin
       const totalWidth = track.scrollWidth;
-      const amountToScroll = totalWidth - window.innerWidth + 400; // Increased padding from 100 to 300
+      const amountToScroll = totalWidth - window.innerWidth + 400;
 
-      // Logic: Pin the wrapper, move the track LEFT
+      // Pin the wrapper, move the track LEFT
       const scrollTween = gsap.to(track, {
         x: -amountToScroll,
-        ease: "none", // Linear movement tied to scroll
+        ease: "none",
         scrollTrigger: {
           trigger: ".services-wrapper",
-          pin: true,           // Pin the section
-          scrub: 1,            // Smooth scrubbing
-          // "center center" means: Start when center of section hits center of viewport
-          // This allows the user to see the header fully before pinning starts
-          start: "center center-=100",    
-          
-          // Increase the scroll distance to make the animation slower/smoother
-          // +=2000 means the user has to scroll 2000px to complete the horizontal move
-          end: "+=2000", 
+          pin: true,
+          scrub: 1,
+          start: "center center-=100",
+          end: "+=2000",
           anticipatePin: 1
         }
       });
 
-      // Optional: Add Parallax to images inside cards as they move
-      cards.forEach(card => {
-        const img = card.querySelector('.card-image');
-        // Small parallax movement for "premium" feel
-        gsap.to(img, {
-            x: -50, // Move image slightly inside frame
-            ease: "none",
-            scrollTrigger: {
-                trigger: card,
-                containerAnimation: scrollTween, // Link to the horizontal scroll
-                start: "left right",
-                end: "right left",
-                scrub: true
-            }
-        });
-      });
+      // Removed parallax animation that was causing image issues
+      // Images now stay fixed during scroll for cleaner appearance
     });
   }
 
