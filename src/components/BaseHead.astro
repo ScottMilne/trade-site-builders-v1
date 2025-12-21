@@ -11,6 +11,7 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_ID || 'G-CHBQEG5R31';
 
 const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 ---
@@ -44,6 +45,49 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<!-- Google tag (gtag.js) -->
+{GA_MEASUREMENT_ID && (
+	<>
+		<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+		<script is:inline define:vars={{ GA_MEASUREMENT_ID, currentPath: Astro.url.pathname }}>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', GA_MEASUREMENT_ID, {
+				page_path: currentPath,
+			});
+		</script>
+		<script is:inline>
+			// Track phone clicks and CTAs
+			document.addEventListener('DOMContentLoaded', () => {
+				// Track phone number clicks
+				document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+					link.addEventListener('click', () => {
+						if (typeof gtag !== 'undefined') {
+							gtag('event', 'phone_click', {
+								event_category: 'Contact',
+								event_label: link.href,
+							});
+						}
+					});
+				});
+
+				// Track pricing CTA clicks
+				document.querySelectorAll('a[href="/pricing"]').forEach(link => {
+					link.addEventListener('click', () => {
+						if (typeof gtag !== 'undefined') {
+							gtag('event', 'cta_click', {
+								event_category: 'Conversion',
+								event_label: 'Pricing',
+							});
+						}
+					});
+				});
+			});
+		</script>
+	</>
+)}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
