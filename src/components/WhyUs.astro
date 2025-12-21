@@ -4,59 +4,56 @@
 <section style="padding: 5rem 0; background: var(--color-navy-900); color: white; overflow: hidden;">
 	<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
 		<div style="display: flex; flex-direction: column; align-items: center; gap: 4rem;">
-			<div style="width: 100%;" class="why-us-content-wrapper">
-				<h2 class="why-us-heading" style="font-family: var(--font-heading); font-weight: bold; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">
+			<div style="width: 100%;">
+				<h2 style="font-family: var(--font-heading); font-weight: bold; font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">
 					Focus On The Jobs.<br />
 					<span style="color: var(--color-gold-500);">We'll Handle The Web.</span>
 				</h2>
-				<p class="why-us-description" style="color: #cbd5e1; font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.75;">
+				<p style="color: #cbd5e1; font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.75;">
 					You became a master of your trade to build, fix, and create. Not to wrestle with website updates or hosting headaches. 
 					We handle all the technical stuff so you can focus on what you do best: running your business and winning more jobs.
 				</p>
-				<ul class="why-us-list" style="list-style: none; padding: 0; margin: 0 0 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
-					<li class="why-us-list-item" style="display: flex; align-items: center; gap: 0.75rem;">
+				<ul style="list-style: none; padding: 0; margin: 0 0 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
+					<li style="display: flex; align-items: center; gap: 0.75rem;">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold-500); flex-shrink: 0;">
 							<path d="M20 6 9 17l-5-5"></path>
 						</svg>
 						<span style="font-size: 1.25rem; font-weight: 500;">Domain & Hosting Included</span>
 					</li>
-					<li class="why-us-list-item" style="display: flex; align-items: center; gap: 0.75rem;">
+					<li style="display: flex; align-items: center; gap: 0.75rem;">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold-500); flex-shrink: 0;">
 							<path d="M20 6 9 17l-5-5"></path>
 						</svg>
 						<span style="font-size: 1.25rem; font-weight: 500;">Professional Copywriting</span>
 					</li>
-					<li class="why-us-list-item" style="display: flex; align-items: center; gap: 0.75rem;">
+					<li style="display: flex; align-items: center; gap: 0.75rem;">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold-500); flex-shrink: 0;">
 							<path d="M20 6 9 17l-5-5"></path>
 						</svg>
 						<span style="font-size: 1.25rem; font-weight: 500;">Monthly Updates & Maintenance</span>
 					</li>
 				</ul>
-				<a href="tel:07700171266" class="why-us-cta" style="display: inline-block; background: white; color: var(--color-navy-900); font-family: var(--font-heading); font-weight: bold; font-size: 1.25rem; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: background 0.2s;">
+				<a href="tel:07700171266" style="display: inline-block; background: white; color: var(--color-navy-900); font-family: var(--font-heading); font-weight: bold; font-size: 1.25rem; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: background 0.2s;">
 					Get A Free Quote
 				</a>
 			</div>
 			<div style="width: 100%; position: relative;" class="why-us-image-wrapper">
 				<div class="why-us-accent" style="position: absolute; inset: -1rem; background: var(--color-gold-500); border-radius: 0.5rem; opacity: 0.2; transform: rotate(3deg);"></div>
-				<img src="/images/why-us/electrician-working.png" alt="Electrician working" style="position: relative; width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);" class="why-us-image">
+				<img 
+					src="/images/why-us/electrician-working.webp" 
+					alt="Electrician working" 
+					style="position: relative; width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);" 
+					class="why-us-image"
+				/>
 			</div>
 		</div>
 	</div>
 </section>
 
 <style>
-	.why-us-heading,
-	.why-us-description,
-	.why-us-list-item,
-	.why-us-cta,
-	.why-us-image-wrapper {
-		opacity: 0;
-	}
-
 	.why-us-image {
 		transition: filter 0.5s ease;
-		filter: grayscale(100%);
+    filter: grayscale(100%);
 	}
 	
 	.why-us-image:hover {
@@ -75,116 +72,3 @@
 		}
 	}
 </style>
-
-<script>
-	function waitForGSAP(callback) {
-		if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
-			callback();
-		} else {
-			setTimeout(() => waitForGSAP(callback), 50);
-		}
-	}
-
-	function initAnimations() {
-		gsap.registerPlugin(ScrollTrigger);
-		
-		// Set initial states
-		gsap.set('.why-us-heading', { opacity: 0, y: 50 });
-		gsap.set('.why-us-description', { opacity: 0, y: 30 });
-		gsap.set('.why-us-list-item', { opacity: 0, x: -30 });
-		gsap.set('.why-us-cta', { opacity: 0, y: 30 });
-		gsap.set('.why-us-image-wrapper', { opacity: 0, x: 50 });
-		gsap.set('.why-us-accent', { opacity: 0, scale: 0.8 });
-		
-		// Animate heading
-		gsap.to('.why-us-heading', {
-			scrollTrigger: {
-				trigger: '.why-us-content-wrapper',
-				start: 'top 80%',
-				toggleActions: 'play none none none'
-			},
-			opacity: 1,
-			y: 0,
-			duration: 0.8,
-			ease: 'power3.out'
-		});
-		
-		// Animate description
-		gsap.to('.why-us-description', {
-			scrollTrigger: {
-				trigger: '.why-us-content-wrapper',
-				start: 'top 80%',
-				toggleActions: 'play none none none'
-			},
-			opacity: 1,
-			y: 0,
-			duration: 0.8,
-			delay: 0.2,
-			ease: 'power3.out'
-		});
-		
-		// Animate list items
-		gsap.to('.why-us-list-item', {
-			scrollTrigger: {
-				trigger: '.why-us-list',
-				start: 'top 80%',
-				toggleActions: 'play none none none'
-			},
-			opacity: 1,
-			x: 0,
-			duration: 0.6,
-			stagger: 0.1,
-			delay: 0.4,
-			ease: 'power3.out'
-		});
-		
-		// Animate CTA button
-		gsap.to('.why-us-cta', {
-			scrollTrigger: {
-				trigger: '.why-us-content-wrapper',
-				start: 'top 80%',
-				toggleActions: 'play none none none'
-			},
-			opacity: 1,
-			y: 0,
-			duration: 0.6,
-			delay: 0.7,
-			ease: 'power3.out'
-		});
-		
-		// Animate image wrapper
-		gsap.to('.why-us-image-wrapper', {
-			scrollTrigger: {
-				trigger: '.why-us-image-wrapper',
-				start: 'top 80%',
-				toggleActions: 'play none none none'
-			},
-			opacity: 1,
-			x: 0,
-			duration: 0.8,
-			ease: 'power3.out'
-		});
-		
-		// Animate accent background
-		gsap.to('.why-us-accent', {
-			scrollTrigger: {
-				trigger: '.why-us-image-wrapper',
-				start: 'top 80%',
-				toggleActions: 'play none none none'
-			},
-			opacity: 0.2,
-			scale: 1,
-			duration: 0.8,
-			delay: 0.3,
-			ease: 'back.out(1.7)'
-		});
-	}
-
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', () => {
-			waitForGSAP(initAnimations);
-		});
-	} else {
-		waitForGSAP(initAnimations);
-	}
-</script>
