@@ -13,6 +13,18 @@
 		window.gsap = gsap;
 		window.ScrollTrigger = ScrollTrigger;
 		window.ScrollToPlugin = ScrollToPlugin;
+		
+		// Batch ScrollTrigger refreshes to reduce reflows
+		let refreshTimeout;
+		const originalRefresh = ScrollTrigger.refresh;
+		ScrollTrigger.refresh = function() {
+			clearTimeout(refreshTimeout);
+			refreshTimeout = setTimeout(() => {
+				requestAnimationFrame(() => {
+					originalRefresh.call(this);
+				});
+			}, 10);
+		};
 	}
 </script>
 

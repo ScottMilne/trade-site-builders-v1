@@ -391,53 +391,67 @@ const services = [
   function initDeckAnimations() {
     gsap.registerPlugin(ScrollTrigger);
     
-    // --- MOBILE SCROLL PROGRESS ---
-    const viewport = document.querySelector('.deck-viewport');
-    const progressFill = document.querySelector('.progress-fill');
-    
-    if (viewport && progressFill) {
-      viewport.addEventListener('scroll', () => {
-        const maxScroll = viewport.scrollWidth - viewport.clientWidth;
-        const scroll = viewport.scrollLeft;
-        const progress = scroll / maxScroll;
-        const percent = Math.min(Math.max(progress, 0), 1);
-        progressFill.style.transform = `translateX(${percent * 500}%)`;
-      });
-    }
-
-    // --- DESKTOP SCROLLTRIGGER ---
-    const mm = gsap.matchMedia();
-    
-    mm.add("(min-width: 1024px)", () => {
-      const track = document.querySelector('.deck-track');
+    // Use requestAnimationFrame to batch layout reads
+    requestAnimationFrame(() => {
+      // --- MOBILE SCROLL PROGRESS ---
+      const viewport = document.querySelector('.deck-viewport');
+      const progressFill = document.querySelector('.progress-fill');
       
-      const totalWidth = track.scrollWidth;
-      const amountToScroll = totalWidth - window.innerWidth + 400;
+      if (viewport && progressFill) {
+        // Use passive event listener for better performance
+        viewport.addEventListener('scroll', () => {
+          requestAnimationFrame(() => {
+            const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+            const scroll = viewport.scrollLeft;
+            const progress = scroll / maxScroll;
+            const percent = Math.min(Math.max(progress, 0), 1);
+            progressFill.style.transform = `translateX(${percent * 500}%)`;
+          });
+        }, { passive: true });
+      }
 
-      // Pin the wrapper, move the track LEFT
-      const scrollTween = gsap.to(track, {
-        x: -amountToScroll,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".services-wrapper",
-          pin: true,
-          scrub: 1,
-          start: "center center-=100",
-          end: "+=2000",
-          anticipatePin: 1
-        }
+      // --- DESKTOP SCROLLTRIGGER ---
+      const mm = gsap.matchMedia();
+      
+      mm.add("(min-width: 1024px)", () => {
+        // Batch all layout reads first
+        const track = document.querySelector('.deck-track');
+        if (!track) return;
+        
+        // Read all layout properties in one batch
+        const trackRect = track.getBoundingClientRect();
+        const totalWidth = track.scrollWidth;
+        const windowWidth = window.innerWidth;
+        const amountToScroll = totalWidth - windowWidth + 400;
+
+        // Then perform writes
+        const scrollTween = gsap.to(track, {
+          x: -amountToScroll,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".services-wrapper",
+            pin: true,
+            scrub: 1,
+            start: "center center-=100",
+            end: "+=2000",
+            anticipatePin: 1,
+            refreshPriority: -1 // Lower priority to reduce reflows
+          }
+        });
       });
-
-      // Removed parallax animation that was causing image issues
-      // Images now stay fixed during scroll for cleaner appearance
     });
   }
 
+  // Delay initialization slightly to let browser finish initial layout
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      waitForGSAP(initDeckAnimations);
+      setTimeout(() => {
+        waitForGSAP(initDeckAnimations);
+      }, 100);
     });
   } else {
-    waitForGSAP(initDeckAnimations);
+    setTimeout(() => {
+      waitForGSAP(initDeckAnimations);
+    }, 100);
   }
 </script>

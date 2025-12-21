@@ -241,3 +241,19 @@ img {
     padding: 4rem 0;
   }
 }
+
+/* Reduce forced reflows by hinting browser about transforms */
+.deck-track,
+.deck-viewport,
+.problem-item,
+.reviews-quote-icon,
+.reviews-quote,
+.reviews-stars {
+  will-change: transform, opacity;
+}
+
+/* After animations, remove will-change to free resources */
+.deck-track.animated,
+.problem-item.animated {
+  will-change: auto;
+}

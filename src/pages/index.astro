@@ -93,72 +93,83 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				function initSectionAnimations() {
 					gsap.registerPlugin(ScrollTrigger);
 					
-					// Problem/Solution section animations
-					gsap.set('.problem-item', { opacity: 0, y: 50 });
-					
-					gsap.to('.problem-item', {
-						scrollTrigger: {
-							trigger: '.problem-solution-section',
-							start: 'top 80%',
-							toggleActions: 'play none none none'
-						},
-						opacity: 1,
-						y: 0,
-						duration: 0.8,
-						stagger: 0.15,
-						ease: 'power3.out'
-					});
-					
-					// Reviews section animations
-					gsap.set('.reviews-quote-icon', { opacity: 0, scale: 0.8 });
-					gsap.set('.reviews-quote', { opacity: 0, y: 30 });
-					gsap.set('.reviews-stars', { opacity: 0, y: 20 });
-					
-					gsap.to('.reviews-quote-icon', {
-						scrollTrigger: {
-							trigger: '.reviews-section',
-							start: 'top 80%',
-							toggleActions: 'play none none none'
-						},
-						opacity: 1,
-						scale: 1,
-						duration: 0.6,
-						ease: 'power3.out'
-					});
-					
-					gsap.to('.reviews-quote', {
-						scrollTrigger: {
-							trigger: '.reviews-section',
-							start: 'top 80%',
-							toggleActions: 'play none none none'
-						},
-						opacity: 1,
-						y: 0,
-						duration: 0.8,
-						delay: 0.2,
-						ease: 'power3.out'
-					});
-					
-					gsap.to('.reviews-stars', {
-						scrollTrigger: {
-							trigger: '.reviews-section',
-							start: 'top 80%',
-							toggleActions: 'play none none none'
-						},
-						opacity: 1,
-						y: 0,
-						duration: 0.6,
-						delay: 0.4,
-						ease: 'power3.out'
+					// Batch all layout reads using requestAnimationFrame
+					requestAnimationFrame(() => {
+						// Problem/Solution section animations
+						gsap.set('.problem-item', { opacity: 0, y: 50 });
+						
+						gsap.to('.problem-item', {
+							scrollTrigger: {
+								trigger: '.problem-solution-section',
+								start: 'top 80%',
+								toggleActions: 'play none none none',
+								refreshPriority: -1
+							},
+							opacity: 1,
+							y: 0,
+							duration: 0.8,
+							stagger: 0.15,
+							ease: 'power3.out'
+						});
+						
+						// Reviews section animations
+						gsap.set('.reviews-quote-icon', { opacity: 0, scale: 0.8 });
+						gsap.set('.reviews-quote', { opacity: 0, y: 30 });
+						gsap.set('.reviews-stars', { opacity: 0, y: 20 });
+						
+						gsap.to('.reviews-quote-icon', {
+							scrollTrigger: {
+								trigger: '.reviews-section',
+								start: 'top 80%',
+								toggleActions: 'play none none none',
+								refreshPriority: -1
+							},
+							opacity: 1,
+							scale: 1,
+							duration: 0.6,
+							ease: 'power3.out'
+						});
+						
+						gsap.to('.reviews-quote', {
+							scrollTrigger: {
+								trigger: '.reviews-section',
+								start: 'top 80%',
+								toggleActions: 'play none none none',
+								refreshPriority: -1
+							},
+							opacity: 1,
+							y: 0,
+							duration: 0.8,
+							delay: 0.2,
+							ease: 'power3.out'
+						});
+						
+						gsap.to('.reviews-stars', {
+							scrollTrigger: {
+								trigger: '.reviews-section',
+								start: 'top 80%',
+								toggleActions: 'play none none none',
+								refreshPriority: -1
+							},
+							opacity: 1,
+							y: 0,
+							duration: 0.6,
+							delay: 0.4,
+							ease: 'power3.out'
+						});
 					});
 				}
 
 				if (document.readyState === 'loading') {
 					document.addEventListener('DOMContentLoaded', () => {
-						waitForGSAP(initSectionAnimations);
+						setTimeout(() => {
+							waitForGSAP(initSectionAnimations);
+						}, 100);
 					});
 				} else {
-					waitForGSAP(initSectionAnimations);
+					setTimeout(() => {
+						waitForGSAP(initSectionAnimations);
+					}, 100);
 				}
 			</script>
 			<Services />
