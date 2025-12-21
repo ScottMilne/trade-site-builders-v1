@@ -1,0 +1,75 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.astro';
+import { SITE_TITLE } from '../../consts';
+import { getLocations } from '../../utils/seo-data';
+
+const locations = getLocations();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Locations | ${SITE_TITLE}`} description="Website builders serving tradespeople across the UK. Find professional web design services in your area." />
+	</head>
+	<body class="bg-white text-slate-900 font-sans antialiased">
+		<Navbar />
+		<main class="w-full min-h-screen flex flex-col">
+			<!-- Hero Section -->
+			<section style="padding: 8rem 0 6rem; background: var(--color-navy-900); position: relative; overflow: hidden;">
+				<div style="position: absolute; inset: 0; opacity: 0.1; background-image: radial-gradient(rgb(251, 191, 36) 1px, transparent 1px); background-size: 30px 30px;"></div>
+				<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem; text-align: center; position: relative; z-index: 10;">
+					<h1 style="font-size: 3.5rem; font-weight: bold; color: white; margin-bottom: 1.5rem; line-height: 1.1;">
+						Website Builders Across the UK
+					</h1>
+					<p style="font-size: 1.25rem; color: #9ca3af; max-width: 42rem; margin: 0 auto; line-height: 1.75;">
+						Professional website design services for tradespeople in cities and towns across the United Kingdom.
+					</p>
+				</div>
+			</section>
+
+			<!-- Locations Grid -->
+			<section style="padding: 6rem 0; background: white;">
+				<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+					<div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+						{locations.map((location, index) => (
+							<a href={`/locations/${location.slug}`} class={`location-card location-card-${index + 1}`} style="text-decoration: none; color: inherit; display: block; background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 100%); border-radius: 1.5rem; padding: 3rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); transition: all 0.3s; position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+								<div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+								<div style="position: relative; z-index: 10;">
+									<h2 style="font-size: 2rem; font-weight: bold; color: white; margin-bottom: 1rem; line-height: 1.2;">{location.name}</h2>
+									<p style="font-size: 1.125rem; color: #cbd5e1; line-height: 1.75; margin-bottom: 2rem;">{location.description}</p>
+									<div style="display: flex; align-items: center; color: var(--color-gold-500); font-weight: 600; font-size: 1rem;">
+										<span>Learn More</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;">
+											<path d="M5 12h14"></path>
+											<path d="m12 5 7 7-7 7"></path>
+										</svg>
+									</div>
+								</div>
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
+			
+			<CTA />
+		</main>
+		<Footer />
+		
+		<style>
+			.location-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+			}
+
+			@media (min-width: 768px) {
+				section:nth-of-type(2) > div > div {
+					grid-template-columns: repeat(2, 1fr) !important;
+				}
+			}
+		</style>
+	</body>
+</html>
+

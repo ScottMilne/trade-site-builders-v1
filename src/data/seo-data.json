@@ -1,0 +1,97 @@
+{
+  "trades": [
+    {
+      "slug": "plumbers",
+      "name": "Plumber",
+      "plural": "Plumbers",
+      "title": "Plumber Website Builders",
+      "description": "Professional website design for plumbers. Get more plumbing jobs with a website that showcases your expertise and captures leads 24/7.",
+      "keywords": ["plumber website", "plumber web design", "plumber website builders"]
+    },
+    {
+      "slug": "electricians",
+      "name": "Electrician",
+      "plural": "Electricians",
+      "title": "Electrician Website Builders",
+      "description": "Stand out from the competition online with a website that builds trust and converts visitors into customers. Professional web design for electricians.",
+      "keywords": ["electrician website", "electrician web design", "electrician website builders"]
+    },
+    {
+      "slug": "builders",
+      "name": "Builder",
+      "plural": "Builders",
+      "title": "Builder Website Builders",
+      "description": "Showcase your projects and get more quotes with a website that highlights your craftsmanship and expertise. Professional web design for builders.",
+      "keywords": ["builder website", "builder web design", "builder website builders"]
+    },
+    {
+      "slug": "landscapers",
+      "name": "Landscaper",
+      "plural": "Landscapers",
+      "title": "Landscaper Website Builders",
+      "description": "Beautiful image galleries to showcase your work and attract homeowners looking for landscaping services. Professional web design for landscapers.",
+      "keywords": ["landscaper website", "landscaper web design", "landscaper website builders"]
+    },
+    {
+      "slug": "roofers",
+      "name": "Roofer",
+      "plural": "Roofers",
+      "title": "Roofer Website Builders",
+      "description": "Professional online presence for roofing businesses that builds trust and generates quality leads. Professional web design for roofers.",
+      "keywords": ["roofer website", "roofer web design", "roofer website builders"]
+    },
+    {
+      "slug": "carpenters",
+      "name": "Carpenter",
+      "plural": "Carpenters",
+      "title": "Carpenter Website Builders",
+      "description": "Showcase your craftsmanship online with a website that highlights your skills and attracts quality clients. Professional web design for carpenters.",
+      "keywords": ["carpenter website", "carpenter web design", "carpenter website builders"]
+    }
+  ],
+  "locations": [
+    {
+      "slug": "london",
+      "name": "London",
+      "title": "Website Builders in London",
+      "description": "Professional website design services in London. Helping tradespeople across London build their digital reputation and get more local leads.",
+      "keywords": ["website builders london", "web design london", "website builders in london"]
+    },
+    {
+      "slug": "manchester",
+      "name": "Manchester",
+      "title": "Website Builders in Manchester",
+      "description": "Professional website design services in Manchester. Helping tradespeople across Manchester build their digital reputation and get more local leads.",
+      "keywords": ["website builders manchester", "web design manchester", "website builders in manchester"]
+    },
+    {
+      "slug": "birmingham",
+      "name": "Birmingham",
+      "title": "Website Builders in Birmingham",
+      "description": "Professional website design services in Birmingham. Helping tradespeople across Birmingham build their digital reputation and get more local leads.",
+      "keywords": ["website builders birmingham", "web design birmingham", "website builders in birmingham"]
+    },
+    {
+      "slug": "leeds",
+      "name": "Leeds",
+      "title": "Website Builders in Leeds",
+      "description": "Professional website design services in Leeds. Helping tradespeople across Leeds build their digital reputation and get more local leads.",
+      "keywords": ["website builders leeds", "web design leeds", "website builders in leeds"]
+    },
+    {
+      "slug": "glasgow",
+      "name": "Glasgow",
+      "title": "Website Builders in Glasgow",
+      "description": "Professional website design services in Glasgow. Helping tradespeople across Glasgow build their digital reputation and get more local leads.",
+      "keywords": ["website builders glasgow", "web design glasgow", "website builders in glasgow"]
+    },
+    {
+      "slug": "dundee",
+      "name": "Dundee",
+      "title": "Website Builders in Dundee",
+      "description": "Professional website design services in Dundee. Helping tradespeople across Dundee build their digital reputation and get more local leads.",
+      "keywords": ["website builders dundee", "web design dundee", "website builders in dundee"]
+    }
+  ]
+}
+
