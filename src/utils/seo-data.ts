@@ -77,3 +77,5 @@ export function getCombinationUrl(tradeSlug: string, locationSlug: string): stri
 	return `/${generateCombinationSlug(tradeSlug, locationSlug)}`;
 }
 
+
+

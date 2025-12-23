@@ -6,13 +6,8 @@ const today = new Date();
 	<div class="footer-container">
 		<div class="footer-grid">
 			<div class="footer-brand">
-				<div class="footer-logo">
-					<div class="footer-logo-box">
-						<span class="footer-logo-letter">T</span>
-					</div>
-					<span class="footer-brand-text">Trade Site <span class="footer-brand-accent">Builders</span></span>
-				</div>
-				<p class="footer-description">Specialised web design and digital marketing agency helping tradespeople grow their business and get more calls.</p>
+				<span class="footer-brand-text">Trade Site <span class="footer-brand-accent">Builders</span></span>
+				<p class="footer-description">Specialised web design for tradespeople helping to grow their business and get more calls.</p>
 			</div>
 			
 			<div class="footer-links">
@@ -46,8 +41,8 @@ const today = new Date();
 
 			<div class="footer-contact">
 				<h2 class="footer-heading">Contact Us</h2>
-				<div class="footer-phone">07700 171 266</div>
-				<p class="footer-email">info@thetradesitebuilders.com</p>
+				<a href="tel:07700171266" class="footer-phone">07700 171 266</a>
+				<a href="mailto:info@thetradesitebuilders.com" class="footer-email">info@thetradesitebuilders.com</a>
 			</div>
 		</div>
 		<div class="footer-copyright">
@@ -77,32 +72,12 @@ const today = new Date();
 		margin-bottom: 3rem;
 	}
 
-	.footer-logo {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		margin-bottom: 1.5rem;
-	}
-
-	.footer-logo-box {
-		width: 2rem;
-		height: 2rem;
-		background: var(--color-gold-500);
-		border-radius: 0.25rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.footer-logo-letter {
-		color: var(--color-navy-900);
-		font-weight: bold;
-	}
-
 	.footer-brand-text {
 		font-weight: bold;
 		color: white;
 		font-size: 1.125rem;
+		margin-bottom: 1.5rem;
+		display: block;
 	}
 
 	.footer-brand-accent {
@@ -152,7 +127,7 @@ const today = new Date();
 	}
 
 	.footer-view-more:hover {
-		color: var(--color-gold-400);
+		color: var(--color-gold-600);
 	}
 
 	.footer-phone {
@@ -160,11 +135,25 @@ const today = new Date();
 		font-size: 1.5rem;
 		font-weight: bold;
 		margin-bottom: 0.5rem;
+		text-decoration: none;
+		display: inline-block;
+		transition: color 0.2s;
+	}
+
+	.footer-phone:hover {
+		color: var(--color-gold-600);
 	}
 
 	.footer-email {
 		color: #9ca3af;
 		font-size: 0.875rem;
+		text-decoration: none;
+		display: inline-block;
+		transition: color 0.2s;
+	}
+
+	.footer-email:hover {
+		color: var(--color-gold-500);
 	}
 
 	.footer-copyright {
