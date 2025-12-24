@@ -1,0 +1,250 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CTA from '../components/CTA.astro';
+import { SITE_TITLE } from '../consts';
+
+const projects = [
+  {
+    title: "Highland Hearth",
+    category: "Bricklaying & Stoves",
+    image: "/images/projects/highlandhearth.png",
+    description: "Premium brickwork and stove installations across the Highlands. We built a rustic yet modern site to showcase their craftsmanship.",
+    link: "https://highlandhearth.co.uk"
+  },
+  {
+    title: "Tayside Tiling",
+    category: "Tiling",
+    image: "/images/projects/taysidetiling.png",
+    description: "Expert wall and floor tiling services. The site features a clean gallery to highlight their precision work in bathrooms and kitchens.",
+    link: "https://taysidetiling.co.uk"
+  },
+  {
+    title: "Highland Leaf",
+    category: "Landscaping",
+    image: "/images/projects/highlandleaf.png",
+    description: "Complete landscape gardening and outdoor transformations. A vibrant, image-led design capturing their stunning garden projects.",
+    link: "https://highlandleaf.co.uk"
+  },
+  {
+    title: "Dundee Design",
+    category: "Painting & Decorating",
+    image: "/images/projects/dundeedesign.png",
+    description: "High-end interior and exterior decorating. We created a sleek, colorful portfolio site to demonstrate their attention to detail.",
+    link: "https://dundeedesign.co.uk"
+  },
+  {
+    title: "Clyde Homes Electrical",
+    category: "Electrical",
+    image: "/images/projects/clydehomeselectrical.png",
+    description: "Domestic and commercial electrical solutions. A professional, trust-building site emphasizing safety and reliability.",
+    link: "https://clydehomeselectrical.uk"
+  }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Our Work | ${SITE_TITLE}`} description="Check out our recent web design projects for tradespeople." />
+  </head>
+  <body>
+    <Navbar />
+    
+    <main>
+        <!-- Simple, Premium Hero -->
+        <section class="page-header">
+            <div class="container">
+                <span class="pre-title">Our Portfolio</span>
+                <h1 class="page-title">Digital Craftsmanship</h1>
+                <p class="page-subtitle">We build sites that don't just look good &mdash; they work. Explore our latest projects for trade professionals.</p>
+            </div>
+        </section>
+
+        <!-- Clean Grid -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-grid">
+                    {projects.map((project) => (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-card group">
+                            <div class="image-frame">
+                                <img src={project.image} alt={project.title} loading="lazy" />
+                                <div class="hover-overlay">
+                                    <span class="view-btn">Visit Website</span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <span class="category-tag">{project.category}</span>
+                                <h3 class="project-title">{project.title}</h3>
+                                <p class="project-desc">{project.description}</p>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <CTA />
+    </main>
+    <Footer />
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: var(--color-navy-900);
+            font-family: var(--font-body);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        .page-header {
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            text-align: center;
+            background: #fff;
+        }
+
+        .pre-title {
+            display: block;
+            color: var(--color-gold-500);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--color-navy-900);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Grid */
+        .portfolio-section {
+            padding-bottom: 8rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Card */
+        .project-card {
+            display: block;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-frame {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: #f1f5f9;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .image-frame img {
+            transform: scale(1.05);
+        }
+
+        .hover-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 25, 47, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        .view-btn {
+            background: white;
+            color: var(--color-navy-900);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transform: translateY(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .view-btn {
+            transform: translateY(0);
+        }
+
+        .category-tag {
+            color: var(--color-gold-500);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: var(--color-navy-900);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .project-desc {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+  </body>
+</html>
