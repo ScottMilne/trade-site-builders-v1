@@ -26,21 +26,90 @@ const currentUrl = `${siteUrl}/locations/${locationData.slug}`;
 <html lang="en">
 	<head>
 		<BaseHead title={pageTitle} description={pageDescription} />
+		<meta name="keywords" content={`website builders, ${locationName}, web design, ${locationData.keywords?.join(', ') || ''}`} />
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "LocalBusiness",
 			"name": locationData.title,
 			"description": locationData.description,
 			"url": currentUrl,
+			"telephone": "+447700171266",
+			"priceRange": "££",
 			"address": {
 				"@type": "PostalAddress",
 				"addressLocality": locationName,
+				"addressRegion": "Scotland",
 				"addressCountry": "GB"
 			},
 			"areaServed": {
 				"@type": "City",
 				"name": locationName
+			},
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Website Design Services",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": `Website Design in ${locationName}`,
+							"description": `Professional website design services for tradespeople in ${locationName}`
+						}
+					}
+				]
 			}
+		})} />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"serviceType": "Website Design",
+			"provider": {
+				"@type": "LocalBusiness",
+				"name": "The Trade Site Builders"
+			},
+			"areaServed": {
+				"@type": "City",
+				"name": locationName
+			}
+		})} />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": `How much does a website cost for tradespeople in ${locationName}?`,
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": `Professional website design for tradespeople in ${locationName} typically starts from £499. We offer packages designed specifically for tradespeople that include mobile-responsive design, local SEO optimisation, and phone call tracking to help you get more hot leads.`
+					}
+				},
+				{
+					"@type": "Question",
+					"name": `How long does it take to build a website in ${locationName}?`,
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": `Most websites for tradespeople in ${locationName} are completed within 2-3 weeks. This includes design, development, content creation, and SEO setup. We work efficiently to get you online and generating leads as quickly as possible.`
+					}
+				},
+				{
+					"@type": "Question",
+					"name": `Will my website show up on Google in ${locationName}?`,
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": `Yes, we optimise every website for local search in ${locationName}. Your site will be optimised for searches like "trades in ${locationName}" and "trades near me". We focus on getting you hot lead phone calls from local customers.`
+					}
+				},
+				{
+					"@type": "Question",
+					"name": `Do I need technical knowledge to manage my website?`,
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": `No technical knowledge required. We build your website so it's easy to update yourself, or we can handle updates for you. Our focus is on getting you phone calls, not making you manage complex systems.`
+					}
+				}
+			]
 		})} />
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
@@ -90,8 +159,86 @@ const currentUrl = `${siteUrl}/locations/${locationData.slug}`;
 							we build websites that target your local customers specifically.
 						</p>
 						<p style="font-size: 1.125rem; color: #475569; line-height: 1.75; text-align: center;">
-							Don't let your competitors in {locationName} take all the work. Get a site that ranks on Google Maps and organic search.
+							Don't let your competitors in {locationName} take all the work. Get a site that ranks on Google and gets you hot lead phone calls.
 						</p>
+						{locationData.localContent && (
+							<p style="font-size: 1.125rem; color: #475569; line-height: 1.75; text-align: center; margin-top: 2rem;">
+								{locationData.localContent}
+							</p>
+						)}
+					</div>
+				</div>
+			</section>
+
+			<!-- How It Works Section -->
+			<section style="padding: 6rem 0; background: #f8fafc;">
+				<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+					<div style="text-align: center; margin-bottom: 4rem;">
+						<h2 style="font-size: 2.5rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">How We Build Websites in {locationName}</h2>
+						<p style="font-size: 1.125rem; color: #475569; max-width: 42rem; margin: 0 auto;">A simple process designed to get you online and generating hot lead phone calls quickly.</p>
+					</div>
+					<div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+						<div style="background: white; border-radius: 1rem; padding: 2rem; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="display: flex; align-items: start; gap: 1.5rem;">
+								<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 9999px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-navy-900); font-weight: bold; font-size: 1.25rem;">
+									1
+								</div>
+								<div>
+									<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Initial Consultation</h3>
+									<p style="color: #475569; line-height: 1.75;">We discuss your business, target customers in {locationName}, and what makes your trade service stand out. This helps us create a website that converts visitors into phone calls.</p>
+								</div>
+							</div>
+						</div>
+						<div style="background: white; border-radius: 1rem; padding: 2rem; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="display: flex; align-items: start; gap: 1.5rem;">
+								<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 9999px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-navy-900); font-weight: bold; font-size: 1.25rem;">
+									2
+								</div>
+								<div>
+									<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Design & Development</h3>
+									<p style="color: #475569; line-height: 1.75;">We create a professional, mobile-responsive website optimised for local search in {locationName}. Every element is designed to encourage phone calls from potential customers.</p>
+								</div>
+							</div>
+						</div>
+						<div style="background: white; border-radius: 1rem; padding: 2rem; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+							<div style="display: flex; align-items: start; gap: 1.5rem;">
+								<div style="width: 3rem; height: 3rem; background: var(--color-gold-500); border-radius: 9999px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-navy-900); font-weight: bold; font-size: 1.25rem;">
+									3
+								</div>
+								<div>
+									<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 0.5rem;">Launch & Optimisation</h3>
+									<p style="color: #475569; line-height: 1.75;">Your website goes live with local SEO already optimised for {locationName}. We ensure it's set up to rank for searches like "trades in {locationName}" and start generating phone calls.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ Section -->
+			<section style="padding: 6rem 0; background: white;">
+				<div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+					<div style="text-align: center; margin-bottom: 4rem;">
+						<h2 style="font-size: 2.5rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Frequently Asked Questions</h2>
+						<p style="font-size: 1.125rem; color: #475569; max-width: 42rem; margin: 0 auto;">Common questions about getting a website in {locationName}.</p>
+					</div>
+					<div style="max-width: 48rem; margin: 0 auto;">
+						<div style="background: #f8fafc; border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+							<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">How much does a website cost for tradespeople in {locationName}?</h3>
+							<p style="color: #475569; line-height: 1.75;">Professional website design for tradespeople in {locationName} typically starts from £499. We offer packages designed specifically for tradespeople that include mobile-responsive design, local SEO optimisation, and phone call tracking to help you get more hot leads.</p>
+						</div>
+						<div style="background: #f8fafc; border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+							<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">How long does it take to build a website in {locationName}?</h3>
+							<p style="color: #475569; line-height: 1.75;">Most websites for tradespeople in {locationName} are completed within 2-3 weeks. This includes design, development, content creation, and SEO setup. We work efficiently to get you online and generating leads as quickly as possible.</p>
+						</div>
+						<div style="background: #f8fafc; border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+							<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Will my website show up on Google in {locationName}?</h3>
+							<p style="color: #475569; line-height: 1.75;">Yes, we optimise every website for local search in {locationName}. Your site will be optimised for searches like "trades in {locationName}" and "trades near me". We focus on getting you hot lead phone calls from local customers.</p>
+						</div>
+						<div style="background: #f8fafc; border-radius: 1rem; padding: 2rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+							<h3 style="font-size: 1.25rem; font-weight: bold; color: var(--color-navy-900); margin-bottom: 1rem;">Do I need technical knowledge to manage my website?</h3>
+							<p style="color: #475569; line-height: 1.75;">No technical knowledge required. We build your website so it's easy to update yourself, or we can handle updates for you. Our focus is on getting you phone calls, not making you manage complex systems.</p>
+						</div>
 					</div>
 				</div>
 			</section>

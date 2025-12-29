@@ -6,7 +6,7 @@
       "plural": "Plumbers",
       "title": "Plumber Website Builders",
       "description": "Professional website design for plumbers. Get more plumbing jobs with a website that showcases your expertise and captures leads 24/7.",
-      "keywords": ["plumber website", "plumber web design", "plumber website builders"]
+      "keywords": ["plumber website", "plumber web design", "plumber website builders", "website for plumbers", "plumber website design", "plumber web designer"]
     },
     {
       "slug": "electricians",
@@ -14,7 +14,7 @@
       "plural": "Electricians",
       "title": "Electrician Website Builders",
       "description": "Stand out from the competition online with a website that builds trust and converts visitors into customers. Professional web design for electricians.",
-      "keywords": ["electrician website", "electrician web design", "electrician website builders"]
+      "keywords": ["electrician website", "electrician web design", "electrician website builders", "website for electricians", "electrician website design", "electrician web designer"]
     },
     {
       "slug": "builders",
@@ -22,7 +22,7 @@
       "plural": "Builders",
       "title": "Builder Website Builders",
       "description": "Showcase your projects and get more quotes with a website that highlights your craftsmanship and expertise. Professional web design for builders.",
-      "keywords": ["builder website", "builder web design", "builder website builders"]
+      "keywords": ["builder website", "builder web design", "builder website builders", "website for builders", "builder website design", "builder web designer"]
     },
     {
       "slug": "landscapers",
@@ -30,7 +30,7 @@
       "plural": "Landscapers",
       "title": "Landscaper Website Builders",
       "description": "Beautiful image galleries to showcase your work and attract homeowners looking for landscaping services. Professional web design for landscapers.",
-      "keywords": ["landscaper website", "landscaper web design", "landscaper website builders"]
+      "keywords": ["landscaper website", "landscaper web design", "landscaper website builders", "website for landscapers", "landscaper website design", "landscaper web designer"]
     },
     {
       "slug": "roofers",
@@ -38,7 +38,7 @@
       "plural": "Roofers",
       "title": "Roofer Website Builders",
       "description": "Professional online presence for roofing businesses that builds trust and generates quality leads. Professional web design for roofers.",
-      "keywords": ["roofer website", "roofer web design", "roofer website builders"]
+      "keywords": ["roofer website", "roofer web design", "roofer website builders", "website for roofers", "roofer website design", "roofer web designer"]
     },
     {
       "slug": "carpenters",
@@ -46,52 +46,180 @@
       "plural": "Carpenters",
       "title": "Carpenter Website Builders",
       "description": "Showcase your craftsmanship online with a website that highlights your skills and attracts quality clients. Professional web design for carpenters.",
-      "keywords": ["carpenter website", "carpenter web design", "carpenter website builders"]
+      "keywords": ["carpenter website", "carpenter web design", "carpenter website builders", "website for carpenters", "carpenter website design", "carpenter web designer"]
     }
   ],
   "locations": [
     {
-      "slug": "london",
-      "name": "London",
-      "title": "Website Builders in London",
-      "description": "Professional website design services in London. Helping tradespeople across London build their digital reputation and get more local leads.",
-      "keywords": ["website builders london", "web design london", "website builders in london"]
+      "slug": "carnoustie",
+      "name": "Carnoustie",
+      "title": "Website Builders in Carnoustie",
+      "description": "Professional website design services in Carnoustie. Helping tradespeople across Carnoustie build their digital reputation and get more local leads.",
+      "keywords": ["website builders carnoustie", "web design carnoustie", "website builders in carnoustie", "carnoustie website design", "carnoustie web designer", "website design company carnoustie"],
+      "relatedSearches": ["website for trades carnoustie", "local web design carnoustie", "trades website carnoustie"],
+      "localContent": "Carnoustie's thriving trades sector needs professional online presence. We help local tradespeople in Carnoustie stand out online and get more phone calls."
     },
     {
-      "slug": "manchester",
-      "name": "Manchester",
-      "title": "Website Builders in Manchester",
-      "description": "Professional website design services in Manchester. Helping tradespeople across Manchester build their digital reputation and get more local leads.",
-      "keywords": ["website builders manchester", "web design manchester", "website builders in manchester"]
+      "slug": "arbroath",
+      "name": "Arbroath",
+      "title": "Website Builders in Arbroath",
+      "description": "Professional website design services in Arbroath. Helping tradespeople across Arbroath build their digital reputation and get more local leads.",
+      "keywords": ["website builders arbroath", "web design arbroath", "website builders in arbroath", "arbroath website design", "arbroath web designer", "website design company arbroath"],
+      "relatedSearches": ["website for trades arbroath", "local web design arbroath", "trades website arbroath"],
+      "localContent": "Arbroath's thriving trades sector needs professional online presence. We help local tradespeople in Arbroath stand out online and get more phone calls."
     },
     {
-      "slug": "birmingham",
-      "name": "Birmingham",
-      "title": "Website Builders in Birmingham",
-      "description": "Professional website design services in Birmingham. Helping tradespeople across Birmingham build their digital reputation and get more local leads.",
-      "keywords": ["website builders birmingham", "web design birmingham", "website builders in birmingham"]
+      "slug": "montrose",
+      "name": "Montrose",
+      "title": "Website Builders in Montrose",
+      "description": "Professional website design services in Montrose. Helping tradespeople across Montrose build their digital reputation and get more local leads.",
+      "keywords": ["website builders montrose", "web design montrose", "website builders in montrose", "montrose website design", "montrose web designer", "website design company montrose"],
+      "relatedSearches": ["website for trades montrose", "local web design montrose", "trades website montrose"],
+      "localContent": "Montrose's thriving trades sector needs professional online presence. We help local tradespeople in Montrose stand out online and get more phone calls."
     },
     {
-      "slug": "leeds",
-      "name": "Leeds",
-      "title": "Website Builders in Leeds",
-      "description": "Professional website design services in Leeds. Helping tradespeople across Leeds build their digital reputation and get more local leads.",
-      "keywords": ["website builders leeds", "web design leeds", "website builders in leeds"]
+      "slug": "perth",
+      "name": "Perth",
+      "title": "Website Builders in Perth",
+      "description": "Professional website design services in Perth. Helping tradespeople across Perth build their digital reputation and get more local leads.",
+      "keywords": ["website builders perth", "web design perth", "website builders in perth", "perth website design", "perth web designer", "website design company perth"],
+      "relatedSearches": ["website for trades perth", "local web design perth", "trades website perth"],
+      "localContent": "Perth's thriving trades sector needs professional online presence. We help local tradespeople in Perth stand out online and get more phone calls."
+    },
+    {
+      "slug": "forfar",
+      "name": "Forfar",
+      "title": "Website Builders in Forfar",
+      "description": "Professional website design services in Forfar. Helping tradespeople across Forfar build their digital reputation and get more local leads.",
+      "keywords": ["website builders forfar", "web design forfar", "website builders in forfar", "forfar website design", "forfar web designer", "website design company forfar"],
+      "relatedSearches": ["website for trades forfar", "local web design forfar", "trades website forfar"],
+      "localContent": "Forfar's thriving trades sector needs professional online presence. We help local tradespeople in Forfar stand out online and get more phone calls."
+    },
+    {
+      "slug": "st-andrews",
+      "name": "St Andrews",
+      "title": "Website Builders in St Andrews",
+      "description": "Professional website design services in St Andrews. Helping tradespeople across St Andrews build their digital reputation and get more local leads.",
+      "keywords": ["website builders st andrews", "web design st andrews", "website builders in st andrews", "st andrews website design", "st andrews web designer", "website design company st andrews"],
+      "relatedSearches": ["website for trades st andrews", "local web design st andrews", "trades website st andrews"],
+      "localContent": "St Andrews' thriving trades sector needs professional online presence. We help local tradespeople in St Andrews stand out online and get more phone calls."
+    },
+    {
+      "slug": "glenrothes",
+      "name": "Glenrothes",
+      "title": "Website Builders in Glenrothes",
+      "description": "Professional website design services in Glenrothes. Helping tradespeople across Glenrothes build their digital reputation and get more local leads.",
+      "keywords": ["website builders glenrothes", "web design glenrothes", "website builders in glenrothes", "glenrothes website design", "glenrothes web designer", "website design company glenrothes"],
+      "relatedSearches": ["website for trades glenrothes", "local web design glenrothes", "trades website glenrothes"],
+      "localContent": "Glenrothes' thriving trades sector needs professional online presence. We help local tradespeople in Glenrothes stand out online and get more phone calls."
+    },
+    {
+      "slug": "kirkcaldy",
+      "name": "Kirkcaldy",
+      "title": "Website Builders in Kirkcaldy",
+      "description": "Professional website design services in Kirkcaldy. Helping tradespeople across Kirkcaldy build their digital reputation and get more local leads.",
+      "keywords": ["website builders kirkcaldy", "web design kirkcaldy", "website builders in kirkcaldy", "kirkcaldy website design", "kirkcaldy web designer", "website design company kirkcaldy"],
+      "relatedSearches": ["website for trades kirkcaldy", "local web design kirkcaldy", "trades website kirkcaldy"],
+      "localContent": "Kirkcaldy's thriving trades sector needs professional online presence. We help local tradespeople in Kirkcaldy stand out online and get more phone calls."
+    },
+    {
+      "slug": "dunfermline",
+      "name": "Dunfermline",
+      "title": "Website Builders in Dunfermline",
+      "description": "Professional website design services in Dunfermline. Helping tradespeople across Dunfermline build their digital reputation and get more local leads.",
+      "keywords": ["website builders dunfermline", "web design dunfermline", "website builders in dunfermline", "dunfermline website design", "dunfermline web designer", "website design company dunfermline"],
+      "relatedSearches": ["website for trades dunfermline", "local web design dunfermline", "trades website dunfermline"],
+      "localContent": "Dunfermline's thriving trades sector needs professional online presence. We help local tradespeople in Dunfermline stand out online and get more phone calls."
+    },
+    {
+      "slug": "stirling",
+      "name": "Stirling",
+      "title": "Website Builders in Stirling",
+      "description": "Professional website design services in Stirling. Helping tradespeople across Stirling build their digital reputation and get more local leads.",
+      "keywords": ["website builders stirling", "web design stirling", "website builders in stirling", "stirling website design", "stirling web designer", "website design company stirling"],
+      "relatedSearches": ["website for trades stirling", "local web design stirling", "trades website stirling"],
+      "localContent": "Stirling's thriving trades sector needs professional online presence. We help local tradespeople in Stirling stand out online and get more phone calls."
+    },
+    {
+      "slug": "edinburgh",
+      "name": "Edinburgh",
+      "title": "Website Builders in Edinburgh",
+      "description": "Professional website design services in Edinburgh. Helping tradespeople across Edinburgh build their digital reputation and get more local leads.",
+      "keywords": ["website builders edinburgh", "web design edinburgh", "website builders in edinburgh", "edinburgh website design", "edinburgh web designer", "website design company edinburgh"],
+      "relatedSearches": ["website for trades edinburgh", "local web design edinburgh", "trades website edinburgh"],
+      "localContent": "Edinburgh's thriving trades sector needs professional online presence. We help local tradespeople in Edinburgh stand out online and get more phone calls."
+    },
+    {
+      "slug": "livingston",
+      "name": "Livingston",
+      "title": "Website Builders in Livingston",
+      "description": "Professional website design services in Livingston. Helping tradespeople across Livingston build their digital reputation and get more local leads.",
+      "keywords": ["website builders livingston", "web design livingston", "website builders in livingston", "livingston website design", "livingston web designer", "website design company livingston"],
+      "relatedSearches": ["website for trades livingston", "local web design livingston", "trades website livingston"],
+      "localContent": "Livingston's thriving trades sector needs professional online presence. We help local tradespeople in Livingston stand out online and get more phone calls."
+    },
+    {
+      "slug": "falkirk",
+      "name": "Falkirk",
+      "title": "Website Builders in Falkirk",
+      "description": "Professional website design services in Falkirk. Helping tradespeople across Falkirk build their digital reputation and get more local leads.",
+      "keywords": ["website builders falkirk", "web design falkirk", "website builders in falkirk", "falkirk website design", "falkirk web designer", "website design company falkirk"],
+      "relatedSearches": ["website for trades falkirk", "local web design falkirk", "trades website falkirk"],
+      "localContent": "Falkirk's thriving trades sector needs professional online presence. We help local tradespeople in Falkirk stand out online and get more phone calls."
+    },
+    {
+      "slug": "cumbernauld",
+      "name": "Cumbernauld",
+      "title": "Website Builders in Cumbernauld",
+      "description": "Professional website design services in Cumbernauld. Helping tradespeople across Cumbernauld build their digital reputation and get more local leads.",
+      "keywords": ["website builders cumbernauld", "web design cumbernauld", "website builders in cumbernauld", "cumbernauld website design", "cumbernauld web designer", "website design company cumbernauld"],
+      "relatedSearches": ["website for trades cumbernauld", "local web design cumbernauld", "trades website cumbernauld"],
+      "localContent": "Cumbernauld's thriving trades sector needs professional online presence. We help local tradespeople in Cumbernauld stand out online and get more phone calls."
     },
     {
       "slug": "glasgow",
       "name": "Glasgow",
       "title": "Website Builders in Glasgow",
       "description": "Professional website design services in Glasgow. Helping tradespeople across Glasgow build their digital reputation and get more local leads.",
-      "keywords": ["website builders glasgow", "web design glasgow", "website builders in glasgow"]
+      "keywords": ["website builders glasgow", "web design glasgow", "website builders in glasgow", "glasgow website design", "glasgow web designer", "website design company glasgow"],
+      "relatedSearches": ["website for trades glasgow", "local web design glasgow", "trades website glasgow"],
+      "localContent": "Glasgow's thriving trades sector needs professional online presence. We help local tradespeople in Glasgow stand out online and get more phone calls."
     },
     {
-      "slug": "dundee",
-      "name": "Dundee",
-      "title": "Website Builders in Dundee",
-      "description": "Professional website design services in Dundee. Helping tradespeople across Dundee build their digital reputation and get more local leads.",
-      "keywords": ["website builders dundee", "web design dundee", "website builders in dundee"]
+      "slug": "ayr",
+      "name": "Ayr",
+      "title": "Website Builders in Ayr",
+      "description": "Professional website design services in Ayr. Helping tradespeople across Ayr build their digital reputation and get more local leads.",
+      "keywords": ["website builders ayr", "web design ayr", "website builders in ayr", "ayr website design", "ayr web designer", "website design company ayr"],
+      "relatedSearches": ["website for trades ayr", "local web design ayr", "trades website ayr"],
+      "localContent": "Ayr's thriving trades sector needs professional online presence. We help local tradespeople in Ayr stand out online and get more phone calls."
+    },
+    {
+      "slug": "kilmarnock",
+      "name": "Kilmarnock",
+      "title": "Website Builders in Kilmarnock",
+      "description": "Professional website design services in Kilmarnock. Helping tradespeople across Kilmarnock build their digital reputation and get more local leads.",
+      "keywords": ["website builders kilmarnock", "web design kilmarnock", "website builders in kilmarnock", "kilmarnock website design", "kilmarnock web designer", "website design company kilmarnock"],
+      "relatedSearches": ["website for trades kilmarnock", "local web design kilmarnock", "trades website kilmarnock"],
+      "localContent": "Kilmarnock's thriving trades sector needs professional online presence. We help local tradespeople in Kilmarnock stand out online and get more phone calls."
+    },
+    {
+      "slug": "inverness",
+      "name": "Inverness",
+      "title": "Website Builders in Inverness",
+      "description": "Professional website design services in Inverness. Helping tradespeople across Inverness build their digital reputation and get more local leads.",
+      "keywords": ["website builders inverness", "web design inverness", "website builders in inverness", "inverness website design", "inverness web designer", "website design company inverness"],
+      "relatedSearches": ["website for trades inverness", "local web design inverness", "trades website inverness"],
+      "localContent": "Inverness's thriving trades sector needs professional online presence. We help local tradespeople in Inverness stand out online and get more phone calls."
+    },
+    {
+      "slug": "aberdeen",
+      "name": "Aberdeen",
+      "title": "Website Builders in Aberdeen",
+      "description": "Professional website design services in Aberdeen. Helping tradespeople across Aberdeen build their digital reputation and get more local leads.",
+      "keywords": ["website builders aberdeen", "web design aberdeen", "website builders in aberdeen", "aberdeen website design", "aberdeen web designer", "website design company aberdeen"],
+      "relatedSearches": ["website for trades aberdeen", "local web design aberdeen", "trades website aberdeen"],
+      "localContent": "Aberdeen's thriving trades sector needs professional online presence. We help local tradespeople in Aberdeen stand out online and get more phone calls."
     }
   ]
 }
-

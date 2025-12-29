@@ -15,6 +15,8 @@ export interface Location {
 	title: string;
 	description: string;
 	keywords: string[];
+	relatedSearches?: string[];
+	localContent?: string;
 }
 
 export interface SEOData {

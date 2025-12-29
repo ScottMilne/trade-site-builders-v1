@@ -1,5 +1,9 @@
 ---
+import { getLocations } from '../utils/seo-data';
+
 const today = new Date();
+const locations = getLocations();
+const footerLocations = locations.slice(0, 4);
 ---
 
 <footer class="site-footer">
@@ -24,10 +28,9 @@ const today = new Date();
 			<div class="footer-links">
 				<h2 class="footer-heading">Areas Served</h2>
 				<ul class="footer-list">
-					<li><a href="/locations/london">London</a></li>
-					<li><a href="/locations/manchester">Manchester</a></li>
-					<li><a href="/locations/birmingham">Birmingham</a></li>
-					<li><a href="/locations/leeds">Leeds</a></li>
+					{footerLocations.map((location) => (
+						<li><a href={`/locations/${location.slug}`}>{location.name}</a></li>
+					))}
 				</ul>
 				<a href="/locations" class="footer-view-more">View More →</a>
 			</div>
