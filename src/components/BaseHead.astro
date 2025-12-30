@@ -46,42 +46,59 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) - Deferred for better performance -->
 {GA_MEASUREMENT_ID && (
 	<>
-		<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+		<!-- Preconnect for faster connection when script loads -->
+		<link rel="preconnect" href="https://www.googletagmanager.com" />
+		<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+		
+		<!-- Load GTM after page is interactive -->
 		<script is:inline define:vars={{ GA_MEASUREMENT_ID, currentPath: Astro.url.pathname }}>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', GA_MEASUREMENT_ID, {
-				page_path: currentPath,
+			// Defer GTM loading until after page load
+			window.addEventListener('load', function() {
+				// Load GTM script
+				const script = document.createElement('script');
+				script.async = true;
+				script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+				document.head.appendChild(script);
+				
+				// Initialize dataLayer
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', GA_MEASUREMENT_ID, {
+					page_path: currentPath,
+				});
+				
+				// Make gtag available globally
+				window.gtag = gtag;
 			});
 		</script>
+		
 		<script is:inline>
-			// Track phone clicks and CTAs
+			// Track phone clicks and CTAs - waits for gtag to be available
 			document.addEventListener('DOMContentLoaded', () => {
+				function trackEvent(eventName, category, label) {
+					if (typeof window.gtag !== 'undefined') {
+						window.gtag('event', eventName, {
+							event_category: category,
+							event_label: label,
+						});
+					}
+				}
+				
 				// Track phone number clicks
 				document.querySelectorAll('a[href^="tel:"]').forEach(link => {
 					link.addEventListener('click', () => {
-						if (typeof gtag !== 'undefined') {
-							gtag('event', 'phone_click', {
-								event_category: 'Contact',
-								event_label: link.href,
-							});
-						}
+						trackEvent('phone_click', 'Contact', link.href);
 					});
 				});
 
 				// Track pricing CTA clicks
 				document.querySelectorAll('a[href="/pricing"]').forEach(link => {
 					link.addEventListener('click', () => {
-						if (typeof gtag !== 'undefined') {
-							gtag('event', 'cta_click', {
-								event_category: 'Conversion',
-								event_label: 'Pricing',
-							});
-						}
+						trackEvent('cta_click', 'Conversion', 'Pricing');
 					});
 				});
 			});

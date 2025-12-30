@@ -339,13 +339,24 @@ const currentUrl = `${siteUrl}/${slug}`;
 		<Footer />
 
 		<script>
-			function waitForGSAP(callback) {
-				if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
-					callback();
+		function waitForGSAP(callback) {
+			if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
+				callback();
+			} else {
+				// Trigger GSAP loading if not already loaded
+				if (typeof window.loadGSAP === 'function') {
+					window.loadGSAP().then(() => {
+						if (window.gsap && window.ScrollTrigger) {
+							callback();
+						} else {
+							setTimeout(() => waitForGSAP(callback), 50);
+						}
+					});
 				} else {
 					setTimeout(() => waitForGSAP(callback), 50);
 				}
 			}
+		}
 
 			function initAnimations() {
 				gsap.registerPlugin(ScrollTrigger);
