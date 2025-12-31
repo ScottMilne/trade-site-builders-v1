@@ -100,6 +100,9 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 				document.querySelectorAll('a[href="/pricing"]').forEach(link => {
 					link.addEventListener('click', () => {
 						trackEvent('cta_click', 'Conversion', 'Pricing');
+						if (typeof window.fbq !== 'undefined') {
+							window.fbq('trackCustom', 'PricingNavigation');
+						}
 					});
 				});
 			});
@@ -126,11 +129,11 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 	t.src=v;s=b.getElementsByTagName(e)[0];
 	s.parentNode.insertBefore(t,s)}(window, document,'script',
 	'https://connect.facebook.net/en_US/fbevents.js');
-	fbq('init', '901040172458651');
+	fbq('init', '953462664510721');
 	fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=901040172458651&ev=PageView&noscript=1"
+	src="https://www.facebook.com/tr?id=953462664510721&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
