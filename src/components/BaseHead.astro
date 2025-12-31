@@ -74,6 +74,11 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 				
 				// Make gtag available globally
 				window.gtag = gtag;
+				
+				// Track Google Ads conversion event
+				gtag('event', 'ads_conversion_Page_view_Page_load_tay_1', {
+					// <event_parameters>
+				});
 			});
 		</script>
 		
